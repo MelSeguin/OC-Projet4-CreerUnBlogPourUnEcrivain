@@ -31,9 +31,9 @@ try {
         login();
     } elseif ($_GET['action'] == 'logout') {
         logout();
-    } elseif ($_GET['action'] == 'displayAdminView'){
+    } elseif ($_GET['action'] == 'admin'){
       if (isset($_SESSION['name'])){
-        displayAdminView();
+        adminTools();
       } else {
         header('location : index.php?action=listPosts');
       }
@@ -52,7 +52,7 @@ try {
     } elseif ($_GET['action'] == 'editPost') {
         if (isset($_SESSION['name'])){
           if (isset($_GET['id']) && $_GET['id'] > 0) {
-            editPost();
+            editPost($_GET['id']);
           } else {
             throw new Exception('aucun identifiant de post envoyé');
           }
@@ -77,7 +77,7 @@ try {
         }
     } elseif ($_GET['action'] == 'deleteComment'){
         if (isset($_SESSION['name'])){
-          deleteComment();
+          deleteComment($_GET['id']);
         } else {
           header('location : index.php?action=listPosts');
         }
@@ -96,7 +96,7 @@ try {
     } elseif ($_GET['action'] == 'unsetFlag'){
         if (isset($_SESSION['name'])){
           if (isset($_GET['id']) && $_GET['id'] > 0) {
-            unsetFlag();
+            unsetFlag($_GET['id']);
           } else {
             throw new Exception('aucun identifiant de post envoyé');
           }
@@ -105,9 +105,9 @@ try {
         }
     }
   } elseif (isset($_SESSION['name'])) {
-    displayAdminView();
+      require('view/backend/adminView.php');
   } else {
-    listPosts();
+      listPosts();
   }
 } catch(Exception $e) { // S'il y a eu une erreur, alors...
      echo 'Erreur : ' . $e -> getMessage();
