@@ -15,17 +15,6 @@
       return $comments;
     }
 
-  //fonction pour récupérer le nombre de commentaires enregistrés
-    public function commentsCount(){
-      $db = $this -> dbConnect();
-
-      $req = $db -> prepare('SELECT COUNT(*) FROM comments WHERE comment_flag = "1"');
-      $req -> execute(array());
-      $number = $req -> fetch();
-
-      return $number;
-    }
-
 // fonction pour poster un commentaire
     public function postComment($postId, $author, $comment) {
 
@@ -37,10 +26,8 @@
     }
 
 //fonction pour supprimer un commentaire
-    public function deleteComment() {
+    public function deleteComment($commentId) {
       $db = $this -> dbConnect();
-
-      $commentId = $_GET['id'];
 
       $deleteComment = $db -> prepare('DELETE FROM comments WHERE id = :commentId');
       $commentIsDeleted = $deleteComment -> execute(array(':commentId' => $commentId ));
@@ -57,20 +44,8 @@
 
       return $flagIsSet;
     }
-   
- //fonction pour valider un commentaire signalé
-    function unsetFlag($commentId){
-      $db = $this -> dbConnect();
 
-      $commentId = $_GET['id'];
-
-      $setFlag = $db -> prepare ('UPDATE comments SET comment_flag = FALSE WHERE id = :commentId ');
-      $flagIsSet = $setFlag -> execute(array(':commentId' => $commentId));
-
-      return $flagIsUnset;
-    }
-   
-//fonction pour compter le nombre de commentaires postés
+//fonction pour récupérer les commentaires signalés
     function getFlaggedComments(){
       $db = $this -> dbConnect();
 
@@ -80,4 +55,25 @@
       return $getFlaggedComments;
     }
 
+//fonction pour récupérer le nombre de commentaires signalés
+  public function commentsCount(){
+    $db = $this -> dbConnect();
+
+    $req = $db -> prepare('SELECT COUNT(*) FROM comments WHERE comment_flag = "1"');
+    $req -> execute(array());
+    $number = $req -> fetch();
+
+    return $number;
+  }
+
+//fonction pour valider un commentaire signalé
+    function unsetFlag($commentId){
+      $db = $this -> dbConnect();
+
+      $setFlag = $db -> prepare ('UPDATE comments SET comment_flag = FALSE WHERE id = :commentId ');
+      $flagIsSet = $setFlag -> execute(array(':commentId' => $commentId));
+
+      return $flagIsUnset;
+    }
 }
+?>
