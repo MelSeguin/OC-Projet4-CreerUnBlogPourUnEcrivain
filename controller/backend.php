@@ -48,13 +48,6 @@ require_once('model/AccountManager.php');
     require('view/backend/adminView.php');
   }
 
-  function createNewPost(){
-    $postManager = new PostManager();
-    $createNewPost = $postManager -> createNewPost();
-
-    require('view/backend/createPostView.php');
-  }
-
   function savePost(){
     $postManager = new PostManager();
     $savePost = $postManager -> savePost();

@@ -24,12 +24,6 @@
     return $post;
   }
 
-   //afficher la page de création des articles
-
-  public function createNewPost(){
-    $db = $this -> dbConnect();
-  }
-
 // enregistrer un article
   public function savePost(){
     $db = $this->dbConnect();
