@@ -32,11 +32,11 @@ try {
     } elseif ($_GET['action'] == 'logout') {
         logout();
     } elseif ($_GET['action'] == 'admin'){
-      if (isset($_SESSION['name'])){
-        adminTools();
-      } else {
-        header('location : index.php?action=listPosts');
-      }
+        if (isset($_SESSION['name'])){
+          adminTools();
+        } else {
+          header('location : index.php?action=listPosts');
+        }
     } elseif ($_GET['action'] == 'newPost'){
         if (isset($_SESSION['name'])){
           require('view/backend/createPostView.php');
@@ -45,7 +45,7 @@ try {
         }
     } elseif ($_GET['action'] == 'savePost'){
         if (isset($_SESSION['name'])){
-          savePost();
+          savePost($_GET['id']);
         } else {
           header('location : index.php?action=listPosts');
         }
@@ -61,14 +61,14 @@ try {
         }
     } elseif ($_GET['action'] == 'updatePost'){
         if (isset($_SESSION['name'])){
-          updatePost();
+          updatePost($_GET['id']);
         } else {
           header('location : index.php?action=listPosts');
         }
     } elseif ($_GET['action'] == 'deletePost') {
         if (isset($_SESSION['name'])){
           if (isset($_GET['id']) && $_GET['id'] > 0) {
-            deletePost();
+            deletePost($_GET['id']);
           } else {
             throw new Exception('aucun identifiant de post envoyé');
           }
@@ -88,10 +88,10 @@ try {
             throw new Exception('aucun identifiant de commentaire envoyé');
         }
     } elseif ($_GET['action'] == 'displayFlags'){
-        if (isset($_SESSION['name'])){
-          displayFlags();
-        } else {
+        if (!isset($_SESSION['name'])){
           header('location : index.php?action=listPosts');
+        } else {
+          displayFlags();
         }
     } elseif ($_GET['action'] == 'unsetFlag'){
         if (isset($_SESSION['name'])){
@@ -105,7 +105,7 @@ try {
         }
     }
   } elseif (isset($_SESSION['name'])) {
-      require('view/backend/adminView.php');
+      adminTools();
   } else {
       listPosts();
   }
