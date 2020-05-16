@@ -64,9 +64,9 @@ require_once('model/LoginManager.php');
     $deletePost = $postManager -> deletePost();
   }
 
-  function deleteComment(){
+  function deleteComment($commentId){
     $commentManager = new CommentManager();
-    $deleteComment = $commentManager -> deleteComment();
+    $deleteComment = $commentManager -> deleteComment($commentId);
 
     header('location:index.php?action=displayFlags');
   }
