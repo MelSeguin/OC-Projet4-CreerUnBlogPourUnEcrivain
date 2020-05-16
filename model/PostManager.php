@@ -49,18 +49,16 @@
     $savePost -> execute();
 
     if ($savePost){
-      header("location:index.php?action=displayAdminView");
+      header("location:index.php?action=admin");
     } else {
-      echo "Une erreur s'est produite. Merci de placer ça beaucoup mieux ! ";
+      throw new Exception("Cet article n'a pas pu être enregistré. Merci de réessayer plus tard. ");
     }
   }
 
 //modifier un article dans la base de données
   public function updatePost(){
     $db = $this->dbConnect();
-    $getPost = $this -> getPost($_GET['id']);
-
-    $postId = $_GET['id'];
+    $getPost = $this -> getPost($postId);
 
     $postTitle = htmlspecialchars($_POST['title']);
     $postContent = $_POST['content'];
@@ -71,33 +69,31 @@
       $postPublished = "no";
     }
 
-
     $updatePost = $db -> prepare ('UPDATE posts SET post_title = :postTitle , post_content = :postContent, post_date = NOW(), post_published = :postPublished WHERE ID = :postId ');
 
     $updatePost -> execute( array(':postTitle' => $postTitle, ':postContent' => $postContent, ':postPublished' => $postPublished, ':postId' => $postId ));
 
     if ($updatePost){
-      header("location:index.php?action=displayAdminView");
+      header("location:index.php?action=admin");
     } else {
-      echo "erreur réécrire quelque chose de mieux :) ";
+      throw new Exception("Cet article n'a pas pu être mis à jour. Merci de réessayer plus tard. ") ;
     }
   }
 
 //supprimer un article
   public function deletePost() {
     $db = $this -> dbConnect();
-    $getPost = $this -> getPost($_GET['id']);
-
-    $postId = $_GET['id'];
+    $getPost = $this -> getPost($postId);
 
     $deletePost = $db -> prepare('DELETE FROM posts WHERE id = ?');
-    $deletePost -> execute(array($_GET['id']));
+    $deletePost -> execute(array($postId));
 
     if ($deletePost){
-      header("location:index.php?action=displayAdminView");
+      header("location:index.php?action=admin");
     } else {
-      echo "erreur réécrire quelque chose de mieux :) ";
+        throw new Exception("Cet article n'a pas pu être supprimé. Merci de réessayer plus tard. ");
     }
   }
+
 }
 ?>
