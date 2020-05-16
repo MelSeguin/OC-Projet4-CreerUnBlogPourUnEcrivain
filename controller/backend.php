@@ -2,7 +2,6 @@
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 require_once('model/LoginManager.php');
-require_once('model/AccountManager.php');
 
   function login() {
 
@@ -14,7 +13,7 @@ require_once('model/AccountManager.php');
         $_SESSION['name'] = $user[1];
         $_SESSION['password'] = $user[2];
 
-        header ('location: index.php?action=displayAdminView');
+        header ('location: index.php?action=admin');
 
     } elseif ($_POST['name'] !== $user[1]){
         $correctInfos = false;
@@ -31,19 +30,12 @@ require_once('model/AccountManager.php');
     require('view/backend/logoutView.php');
   }
 
-  function displayAdminView(){
-    $accountManager = new AccountManager();
-    $displayAdminView = $accountManager -> displayAdminView();
-
+  function adminTools(){
     $commentManager = new CommentManager();
     $getNumber = $commentManager -> commentsCount();
 
     $postManager = new PostManager();
     $getPosts = $postManager -> getPosts();
-
-    $welcomeMessage = "Bonjour ".$_SESSION['name'].". Comment allez vous aujourd'hui ?
-    Prêt pour rédiger un <a class='text-link' href='index.php?action=newPost'> nouvel article </a> ?";
-    $errorMessage = "Vous ne devriez pas être sur cette page mon petit, merci de vous connecter pour accéder aux fonctions administrateur:)";
 
     require('view/backend/adminView.php');
   }
@@ -55,9 +47,9 @@ require_once('model/AccountManager.php');
     require('view/backend/createPostView.php');
   }
 
-  function editPost(){
+  function editPost($postId){
     $postManager = new PostManager();
-    $editPost = $postManager -> getPost($_GET['id']);
+    $editPost = $postManager -> getPost($postId);
 
     require('view/backend/updatePostView.php');
   }
@@ -78,3 +70,19 @@ require_once('model/AccountManager.php');
 
     header('location:index.php?action=displayFlags');
   }
+
+  function displayFlags(){
+    $commentManager = new CommentManager();
+    $getComments = $commentManager -> getFlaggedComments();
+
+    require('view/backend/flagsView.php');
+  }
+
+  function unsetFlag($commentId) {
+      $commentManager = new CommentManager();
+      $unFlag = $commentManager -> unsetFlag($commentId);
+
+      header('location:index.php?action=displayFlags');
+  }
+
+ ?>
