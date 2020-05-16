@@ -54,14 +54,14 @@ require_once('model/LoginManager.php');
     require('view/backend/updatePostView.php');
   }
 
-  function updatePost(){
+  function updatePost($postId){
     $postManager = new PostManager();
-    $updatePost = $postManager -> updatePost();
+    $updatePost = $postManager -> updatePost($postId);
   }
 
-  function deletePost(){
+  function deletePost($postId){
     $postManager = new PostManager();
-    $deletePost = $postManager -> deletePost();
+    $deletePost = $postManager -> deletePost($postId);
   }
 
   function deleteComment($commentId){
@@ -75,6 +75,7 @@ require_once('model/LoginManager.php');
     $commentManager = new CommentManager();
     $getComments = $commentManager -> getFlaggedComments();
 
+    var_dump($getComments);
     require('view/backend/flagsView.php');
   }
 
