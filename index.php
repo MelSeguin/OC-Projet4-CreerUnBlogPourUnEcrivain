@@ -39,7 +39,7 @@ try {
       }
     } elseif ($_GET['action'] == 'newPost'){
         if (isset($_SESSION['name'])){
-          equire('view/backend/createPostView.php');
+          require('view/backend/createPostView.php');
         } else {
           header('location : index.php?action=listPosts');
         }
