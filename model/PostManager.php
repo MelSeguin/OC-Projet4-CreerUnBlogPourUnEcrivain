@@ -25,7 +25,7 @@
   }
 
 // enregistrer un article
-  public function savePost(){
+  public function savePost($postId){
     $db = $this->dbConnect();
 
     //assigner les saisies à une variable
@@ -56,7 +56,7 @@
   }
 
 //modifier un article dans la base de données
-  public function updatePost(){
+  public function updatePost($postId){
     $db = $this->dbConnect();
     $getPost = $this -> getPost($postId);
 
@@ -81,7 +81,7 @@
   }
 
 //supprimer un article
-  public function deletePost() {
+  public function deletePost($postId) {
     $db = $this -> dbConnect();
     $getPost = $this -> getPost($postId);
 
@@ -94,6 +94,5 @@
         throw new Exception("Cet article n'a pas pu être supprimé. Merci de réessayer plus tard. ");
     }
   }
-
 }
 ?>
