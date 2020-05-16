@@ -36,7 +36,7 @@
         </div>
       <hr class ="post-hr">
       <div class="post-content">
-        <?php echo $data[2];?>
+        <?php echo substr($data[2], 0, 1250).'...';?>
       </div>
       <div class="post-footer">
         <a class="post-footer-1" href="index.php?action=post&amp;id=<?= $data[0] ?>"> Découvrir la suite... </a>
