@@ -36,6 +36,7 @@
       return $affectedLines;
     }
 
+//fonction pour supprimer un commentaire
     public function deleteComment() {
       $db = $this -> dbConnect();
 
@@ -47,6 +48,7 @@
       return $commentIsDeleted;
     }
 
+//fonction pour signaler un commentaire
     function setFlag($commentId){
       $db = $this -> dbConnect();
 
@@ -55,17 +57,8 @@
 
       return $flagIsSet;
     }
-
-    function getFlaggedComments(){
-      $db = $this -> dbConnect();
-
-      $getFlaggedComments = $db -> prepare ('SELECT * FROM comments, posts WHERE comments.post_ID = posts.id');
-      $getFlaggedComments -> execute(array());
-
-      return $getFlaggedComments;
-    }
-
-
+   
+ //fonction pour valider un commentaire signalé
     function unsetFlag($commentId){
       $db = $this -> dbConnect();
 
@@ -76,5 +69,15 @@
 
       return $flagIsUnset;
     }
+   
+//fonction pour compter le nombre de commentaires postés
+    function getFlaggedComments(){
+      $db = $this -> dbConnect();
+
+      $getFlaggedComments = $db -> prepare ('SELECT * FROM comments, posts WHERE comments.post_ID = posts.id');
+      $getFlaggedComments -> execute(array());
+
+      return $getFlaggedComments;
+    }
+
 }
-?>

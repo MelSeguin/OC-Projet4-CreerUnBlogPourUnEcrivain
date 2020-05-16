@@ -24,7 +24,7 @@
     return $post;
   }
 
-//afficher la page de création des articles
+   //afficher la page de création des articles
 
   public function createNewPost(){
     $db = $this -> dbConnect();
@@ -105,6 +105,5 @@
       echo "erreur réécrire quelque chose de mieux :) ";
     }
   }
-
 }
 ?>
