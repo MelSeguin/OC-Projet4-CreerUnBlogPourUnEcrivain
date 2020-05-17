@@ -49,7 +49,7 @@
     function getFlaggedComments(){
       $db = $this -> dbConnect();
 
-      $getFlaggedComments = $db -> prepare ('SELECT * FROM comments, posts WHERE comments.post_ID = posts.id');
+      $getFlaggedComments = $db -> prepare ('SELECT * FROM comments, posts WHERE comments.post_ID = posts.id ');
       $getFlaggedComments -> execute(array());
 
       return $getFlaggedComments;

@@ -75,7 +75,6 @@ require_once('model/LoginManager.php');
     $commentManager = new CommentManager();
     $getComments = $commentManager -> getFlaggedComments();
 
-    var_dump($getComments);
     require('view/backend/flagsView.php');
   }
 
