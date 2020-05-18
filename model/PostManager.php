@@ -13,7 +13,7 @@
     return $posts;
   }
 
-//récupérer un article en particulier
+//récupérer un article précis
   public function getPost($postId){
     $db = $this -> dbConnect();
 
@@ -25,35 +25,20 @@
   }
 
 // enregistrer un article
-  public function savePost($postId){
+  public function savePost($postId,$postTitle,$postContent,$postPublished){
     $db = $this->dbConnect();
 
-    //assigner les saisies à une variable
-    $title = htmlspecialchars($_POST['title']);
-    $content = $_POST['content'];
-
-    if (isset($_POST['published'])) {
-      $published = $_POST ['published'];
+    if (isset($postPublished)) {
+      $postPublished = "yes" ;
     } else {
-      $published = "no";
+      $postPublished = "no";
     }
 
-    // préparer la requete d'insertion (SQL)
-    $savePost = $db ->  prepare ('INSERT INTO `posts` (`ID`, `post_title`, `post_content`, `post_date`,`post_published`) VALUES (NULL,:title,:content, NOW(),:published)');
+    $savePost = $db ->  prepare ('INSERT INTO `posts` (`ID`, `post_title`, `post_content`, `post_date`,`post_published`) VALUES (NULL,:postTitle,:postContent, NOW(),:postPublished)');
+    $savePost -> execute(array(':postTitle' => $postTitle, ':postContent' => $postContent, ':postPublished' => $postPublished));
 
-    //lier chaque marqueur à une valeur
-    $savePost -> bindValue(':title', $title, PDO::PARAM_STR);
-    $savePost -> bindValue(':content', $content, PDO::PARAM_STR);
-    $savePost -> bindValue(':published', $published, PDO::PARAM_STR);
-    //executer la requête préparée
-    $savePost -> execute();
-
-    if ($savePost){
-      header("location:index.php?action=admin");
-    } else {
-      throw new Exception("Cet article n'a pas pu être enregistré. Merci de réessayer plus tard. ");
-    }
   }
+
 
 //modifier un article dans la base de données
   public function updatePost($postId){

@@ -44,11 +44,11 @@ try {
           header('location : index.php?action=listPosts');
         }
     } elseif ($_GET['action'] == 'savePost'){
-        if (isset($_SESSION['name'])){
-          savePost($_GET['id']);
-        } else {
-          header('location : index.php?action=listPosts');
-        }
+      if (isset($_SESSION['name'])){
+        savePost($_GET['id'],$_POST['title'],$_POST['content'],$_POST['published']);
+      } else {
+        header('location : index.php');
+      }
     } elseif ($_GET['action'] == 'editPost') {
         if (isset($_SESSION['name'])){
           if (isset($_GET['id']) && $_GET['id'] > 0) {

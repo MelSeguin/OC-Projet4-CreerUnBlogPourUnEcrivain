@@ -40,9 +40,15 @@ require_once('model/LoginManager.php');
     require('view/backend/adminView.php');
   }
 
-  function savePost(){
+  function savePost($postId,$postTitle,$postContent,$postPublished){
     $postManager = new PostManager();
-    $savePost = $postManager -> savePost();
+    $savePost = $postManager -> savePost($postId,$postTitle,$postContent,$postPublished);
+
+    if ($savePost){
+      header("location:index.php?action=admin");
+    } else {
+        throw new Exception("Cet article n'a pas pu être enregistré. Merci de réessayer plus tard. ");
+    }
 
     require('view/backend/createPostView.php');
   }
