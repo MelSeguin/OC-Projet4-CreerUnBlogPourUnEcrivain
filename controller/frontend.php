@@ -36,5 +36,20 @@ require_once('model/CommentManager.php');
      else {
         header('location: index.php?action=post&id='.$postId);
       }
+
+// fonction pour signaler un commentaire et revenir à l'article en cours de lecture
+    function setFlag($commentId){
+      $commentManager = new CommentManager();
+
+      $setFlag = $commentManager -> setFlag($commentId);
+      $getComments = $commentManager -> getComments($comments['post_ID']);
+      $comments = $getComments-> fetch();
+
+      if ($setFlag)  {
+        header('location: index.php?action=post&id='.$comments['post_ID']);
+      } else {
+          throw new Exception("Ce commentaire n'a pas pu être signalé. Merci de réessayer plus tard");
+          echo "<a href='index.php?action=listPosts'> Retour à la liste des articles </a>";
+      }
   }
   ?>
