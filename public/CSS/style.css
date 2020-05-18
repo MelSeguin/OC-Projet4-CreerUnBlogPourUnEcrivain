@@ -1,0 +1,137 @@
+/*Palettes de couleur*/
+
+/*All blue*/
+
+/*
+navy = #053861;
+midnight blue =#072747;
+light blue steel = #BFD7DC;
+light sea green = #1D678C; c'est une nuance de bleu
+sky blue = #88CAE0;
+*/
+
+
+/*
+steel blue = #2C6C9C;
+dark slate grey = #323B40;
+light steel blue = #DAE0E2;
+steel blue= #5187B2;
+sky blue = #6BAADC;
+*/
+/*
+
+font-family: 'Caveat', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+body{
+  display: flex;
+  flex-direction: column;
+  margin : 2% 2% 2% 2%;
+  border: 1px solid #DAE0E2;
+  width : 95%;
+}
+
+header{
+  background-image: url("../images/alaska-1735340_1920.jpg");
+  display: flex;
+  flex-direction:column;
+}
+.header-title{
+  background-image: linear-gradient(to bottom right,#1D678C7a,#0538617a);
+  /* background-color: #ffffff1c; */
+  color : #ECF3F4;
+}
+.main-title{
+  font-family: 'Indie Flower', cursive;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 9%;
+  margin-right: 5%;
+  margin-bottom: 0;
+  text-shadow: -3px 1px 5px #111111;
+}
+.main-subtitle{
+  text-align: center;
+  font-size : 1.3em;
+  margin-top : 0;
+  text-shadow: -3px 1px 5px #111111;
+}
+.navbar{
+  background-color : #1D678Cbd;
+  height : 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navlink {
+  color : #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em ;
+  font-weight: 200;
+  text-decoration: none;
+  margin-right: 5%;
+}
+
+.listposts-section{
+  /* background-color: #1D678C; */
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding : 3%;
+}
+.no-post{
+
+}
+
+.listposts-container{
+  background-color: #ffffff7a;
+  width: 25%;
+  padding: 2%;
+  border: 3px solid #1D678C;
+  border-radius : 3%;
+}
+h3{
+  font-family: 'Indie Flower', cursive;
+  font-size : 1.4em;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+hr {
+  width: 50%;
+  border: none;
+  background-color: #053861bd;
+  height : 1px;
+  margin-bottom: 25px;
+}
+.listposts-footer-link{
+  color : #1D678Cbd;
+  text-decoration: none;
+}
+.listposts-footer-link:hover{
+  font-weight : bold;
+  color: #1D678Cbd;
+}
+/* h1{
+  margin-top : 0;
+  margin-bottom: 1%;
+} */
+
+h1, h2, h3, h4, h5, h6{
+  /* font-family: 'Caveat', cursive; */
+  /* font-family: 'Satisfy', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Special Elite', cursive; */
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+
+}
