@@ -61,9 +61,9 @@ try {
         }
     } elseif ($_GET['action'] == 'updatePost'){
         if (isset($_SESSION['name'])){
-          updatePost($_GET['id']);
+          updatePost($_GET['id'],htmlspecialchars($_POST['title']),$_POST['content'],$_POST['published']);
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     } elseif ($_GET['action'] == 'deletePost') {
         if (isset($_SESSION['name'])){

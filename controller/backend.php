@@ -60,9 +60,16 @@ require_once('model/LoginManager.php');
     require('view/backend/updatePostView.php');
   }
 
-  function updatePost($postId){
+  function updatePost($postId,$postTitle,$postContent,$postPublished){
     $postManager = new PostManager();
-    $updatePost = $postManager -> updatePost($postId);
+    $updatePost = $postManager -> updatePost($postId,$postTitle,$postContent,$postPublished);
+  }
+
+    if ($updatePost){
+      header("location:index.php?action=admin");
+    } else {
+      throw new Exception("Cet article n'a pas pu être mis à jour. Merci de réessayer plus tard. ") ;
+    }
   }
 
   function deletePost($postId){
