@@ -23,13 +23,6 @@ require_once('model/LoginManager.php');
       }
   }
 
-  function logout() {
-    $loginManager = new LoginManager();
-    $loggedOut = $loginManager -> logout();
-
-    require('view/backend/logoutView.php');
-  }
-
   function adminTools(){
     $commentManager = new CommentManager();
     $getNumber = $commentManager -> commentsCount();

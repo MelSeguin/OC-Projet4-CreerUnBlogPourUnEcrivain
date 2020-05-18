@@ -13,12 +13,6 @@ class LoginManager extends Manager {
 
     return $user ;
   }
-
-
-  public function logout() {
-    $db = $this-> dbConnect();
-    session_destroy ();
-  }
 }
 
 ?>

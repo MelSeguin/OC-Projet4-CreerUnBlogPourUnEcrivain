@@ -30,7 +30,8 @@ try {
     } elseif ($_GET['action'] == 'login'){
         login($_POST['password'],$_POST['name']);
     } elseif ($_GET['action'] == 'logout') {
-        logout();
+        session_destroy();
+        require('view/backend/logoutView.php');
     } elseif ($_GET['action'] == 'admin'){
         if (isset($_SESSION['name'])){
           adminTools();
