@@ -14,12 +14,12 @@ require_once('model/CommentManager.php');
   }
 
 //fonction pour obtenir un article en particulier
-  function post() {
+  function post($postId) {
     $postManager = new PostManager();
     $commentManager = new CommentManager();
 
-    $post = $postManager->getPost($postId);
-    $comments = $commentManager->getComments($postId);
+    $post = $postManager -> getPost($postId);
+    $comments = $commentManager-> getComments($postId);
 
     require('view/frontend/postView.php');
   }
