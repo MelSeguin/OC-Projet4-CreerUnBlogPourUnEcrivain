@@ -28,7 +28,7 @@ try {
     } elseif ($_GET['action'] == 'loginForm') {
         require('view/backend/loginView.php');
     } elseif ($_GET['action'] == 'login'){
-        login();
+        login($_POST['password'],$_POST['name']);
     } elseif ($_GET['action'] == 'logout') {
         logout();
     } elseif ($_GET['action'] == 'admin'){

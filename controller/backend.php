@@ -3,19 +3,19 @@ require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 require_once('model/LoginManager.php');
 
-  function login() {
+  function login($password,$name) {
 
     $loginManager = new LoginManager();
-    $user = $loginManager -> connectUser();
+    $user = $loginManager -> login($password,$name);
 
-    if (password_verify($_POST['password'],$user[2]) && $_POST['name'] == $user[1] ){
+    if (password_verify($password,$user[2]) && $name == $user[1] ){
         $correctInfos = true;
         $_SESSION['name'] = $user[1];
         $_SESSION['password'] = $user[2];
 
         header ('location: index.php?action=admin');
 
-    } elseif ($_POST['name'] !== $user[1]){
+    } elseif ($name !== $user[1]){
         $correctInfos = false;
         $errorMessage = "Pseudo et/ou Mot de passe incorrect(s).";
 

@@ -4,11 +4,11 @@ require_once('model/Manager.php');
 
 class LoginManager extends Manager {
 
-  public function connectUser(){
+  public function login($password,$name){
     $db = $this-> dbConnect();
 
     $getUser = $db -> prepare('SELECT * FROM admin');
-    $getUser -> execute(array($_POST['name']));
+    $getUser -> execute(array($name));
     $user = $getUser -> fetch();
 
     return $user ;
@@ -19,6 +19,6 @@ class LoginManager extends Manager {
     $db = $this-> dbConnect();
     session_destroy ();
   }
-} 
+}
 
 ?>
