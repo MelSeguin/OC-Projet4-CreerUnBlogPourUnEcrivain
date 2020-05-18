@@ -18,8 +18,8 @@ require_once('model/CommentManager.php');
     $postManager = new PostManager();
     $commentManager = new CommentManager();
 
-    $post = $postManager->getPost($_GET['id']);
-    $comments = $commentManager->getComments($_GET['id']);
+    $post = $postManager->getPost($postId);
+    $comments = $commentManager->getComments($postId);
 
     require('view/frontend/postView.php');
   }
