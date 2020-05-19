@@ -25,7 +25,7 @@
   }
 
 // enregistrer un article
-  public function savePost($postId,$postTitle,$postContent,$postPublished){
+  public function savePost($postTitle,$postContent,$postPublished){
     $db = $this->dbConnect();
 
     if (isset($postPublished)) {
@@ -35,8 +35,9 @@
     }
 
     $savePost = $db ->  prepare ('INSERT INTO `posts` (`ID`, `post_title`, `post_content`, `post_date`,`post_published`) VALUES (NULL,:postTitle,:postContent, NOW(),:postPublished)');
-    $savePost -> execute(array(':postTitle' => $postTitle, ':postContent' => $postContent, ':postPublished' => $postPublished));
+    $savedPost = $savePost -> execute(array(':postTitle' => $postTitle, ':postContent' => $postContent, ':postPublished' => $postPublished));
 
+    return $savedPost;
   }
 
 

@@ -46,7 +46,7 @@ try {
         }
     } elseif ($_GET['action'] == 'savePost'){
       if (isset($_SESSION['name'])){
-        savePost($_GET['id'],$_POST['title'],$_POST['content'],$_POST['published']);
+        savePost($_POST['title'],$_POST['content'],$_POST['published']);
       } else {
         header('location : index.php');
       }
