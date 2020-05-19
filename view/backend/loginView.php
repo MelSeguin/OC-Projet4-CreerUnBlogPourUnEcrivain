@@ -2,27 +2,19 @@
 
 <?php ob_start(); ?>
 
-  <h1> Billet simple pour l'Alaska </h1>
-  <h3> Connexion </h3>
-
-
-  <?php
-    if (empty($_POST)) {
-      echo $welcomeMessage;
-    } elseif (!empty($_POST && $correctInfos == false)) {
-      echo $errorMessage;
-    }
-  ?>
   <div class="login-fieldset">
+    <h2> Connexion </h2>
+    <?php
+      if (!empty($_POST && $correctInfos == false)) {
+        echo "<p> Pseudo et/ou mot de passe incorrect(s)</p>";
+      }
+    ?>
     <form class="login-form" action="index.php?action=login" method="post">
-      <label for="name"> Pseudo  : </label>
-      <input type="text" name="name" value="" required> <br/>
-      <label for="password"> Mot de passe : </label>
-      <input type="password" name="password" value="" required><br/>
-      <input type="submit" name="submit" value="Envoyer">
+      <i class="fas fa-user"></i><input type="text" name="name" placeholder="Nom d'utilisateur" value="" required> <br/>
+      <i class="fas fa-lock"></i><input type="password" name="password" placeholder="Mot de passe" value="" required><br/>
+      <input type="submit" name="submit" value="Me connecter">
     </form>
     <br/>
-    <a href="#"> Identifiant ou mot de passe oublié ?</a>
   </div>
 
 
