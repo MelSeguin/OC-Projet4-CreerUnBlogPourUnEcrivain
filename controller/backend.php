@@ -56,6 +56,12 @@ require_once('model/LoginManager.php');
   function updatePost($postId,$postTitle,$postContent,$postPublished){
     $postManager = new PostManager();
     $updatePost = $postManager -> updatePost($postId,$postTitle,$postContent,$postPublished);
+
+    if ($updatePost){
+        header("location:index.php?action=admin");
+      } else {
+        throw new Exception("Cet article n'a pas pu être mis à jour. Merci de réessayer plus tard. ");
+      }
   }
 
     if ($updatePost){
