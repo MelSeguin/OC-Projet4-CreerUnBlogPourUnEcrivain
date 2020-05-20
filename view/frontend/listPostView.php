@@ -5,8 +5,8 @@
     <div class="navbar">
     <?php if(isset($_SESSION['name'])):?>
 
-      <a class="navlink" href="index.php?action=newPost"> NOUVEL ARTICLE </a>
-      <a class="navlink" href="index.php?action=admin"> TABLEAU DE BORD </a>
+      <a class="navlink" href="index.php?action=newPost"><i class="fas fa-book-open"></i> NOUVEL ARTICLE </a>
+      <a class="navlink" href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i> TABLEAU DE BORD </a>
       <a class="navlink" href="index.php?action=logout"> <i class="fas fa-sign-out-alt"></i> DECONNEXION </a>
 
 
