@@ -15,7 +15,7 @@ require_once('model/LoginManager.php');
 
         header ('location: index.php?action=admin');
 
-    } elseif ($name !== $user[1]){
+    } elseif ($name !== $user[1] || !password_verify($password,$user[2])){
         $correctInfos = false;
         $errorMessage = "Pseudo et/ou Mot de passe incorrect(s).";
 
@@ -23,7 +23,15 @@ require_once('model/LoginManager.php');
       }
   }
 
+  function logout() {
+    $loginManager = new LoginManager();
+    $loggedOut = $loginManager -> logout();
+
+    require('view/backend/logoutView.php');
+  }
+
   function adminTools(){
+
     $commentManager = new CommentManager();
     $getNumber = $commentManager -> commentsCount();
 
@@ -64,13 +72,6 @@ require_once('model/LoginManager.php');
     }
   }
 
-    if ($updatePost){
-      header("location:index.php?action=admin");
-    } else {
-      throw new Exception("Cet article n'a pas pu être mis à jour. Merci de réessayer plus tard. ") ;
-    }
-  }
-
   function deletePost($postId){
     $postManager = new PostManager();
     $deletePost = $postManager -> deletePost($postId);
@@ -84,8 +85,10 @@ require_once('model/LoginManager.php');
   }
 
   function displayFlags(){
+
     $commentManager = new CommentManager();
     $getComments = $commentManager -> getFlaggedComments();
+    $nbComment = $commentManager -> commentsCount();
 
     require('view/backend/flagsView.php');
   }
