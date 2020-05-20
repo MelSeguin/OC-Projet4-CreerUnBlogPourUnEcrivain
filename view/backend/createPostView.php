@@ -1,7 +1,7 @@
 <?php $title = "Nouvel Article | Billet simple pour l'Alaska"; ?>
 
 <?php ob_start(); ?>
-
+<div class="navbar"></div>
 <div class="edit-post-container">
   <h2> Nouvel article </h2>
     <hr>

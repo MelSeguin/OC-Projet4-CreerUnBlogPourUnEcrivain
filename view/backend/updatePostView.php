@@ -1,6 +1,7 @@
 <?php $title = "Editer | Billet simple pour l'Alaska"; ?>
 
 <?php ob_start(); ?>
+<div class="navbar"></div>
 <div class="edit-post-container">
   <h2> Edition de l'article </h2>
     <hr>
