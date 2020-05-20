@@ -97,29 +97,37 @@ hr {
 
 }
 .listposts-container{
-  margin : auto;
-  background-color: #ffffff7a;
-  width: 35%;
-  height : 25%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  padding: 2%;
-  border: 1px solid #1D678C;
-  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
-  position: relative;
-  box-shadow: 20px 20px rgba(0,0,0,.15);
-  transition: all .4s ease;
+  width : 50%;
+  height: 60%;
+  margin : 2% auto 2% auto;
+
+  border : 1px solid #DAE0E2;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #3d3d3dbd;
 }
 .listposts-container:hover {
-  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-  box-shadow: 10px 10px rgba(0,0,0,.25);
+  border : 1px solid #053861;
+  box-shadow: 2px 4px 6px #3d3d3dbd;
 }
 .listposts-container a{
   text-decoration: none;
   color : inherit;
 }
-.listposts-head{
+.listposts-head p{
+  font-family: "montserrat", sans-serif;
+  font-size: 0.9em;
   margin-left: 5%;
+}
+.listposts-head h3{
+  font-family: "Indie Flower", cursive;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  color: #053861;
+  border-left: 5px solid #053861;
+  width : 100%;
+
 }
 .listposts-content{
   padding: 5% 12% 2% 12%;

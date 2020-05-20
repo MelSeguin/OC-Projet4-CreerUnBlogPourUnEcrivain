@@ -11,7 +11,7 @@
 
 
     <?php else : ?>
-      <a class="navlink" href="index.php?action=loginForm"> <i class="fas fa-home"></i> </a>
+      <a class="navlink" href="index.php?action=listPosts"> <i class="fas fa-home"></i> </a>
       <a class="navlink" href="index.php?action=loginForm"> <i class="fas fa-sign-in-alt"></i>  CONNEXION </a>
     <?php endif;?>
     </div>
@@ -39,7 +39,7 @@
       <div class="listposts-container">
       <a href="index.php?action=post&amp;id=<?= $data[0] ?>">
         <div class="listposts-head">
-          <?php echo htmlspecialchars($data[3]); ?>
+          <p><?php echo htmlspecialchars($data[3]); ?></p>
           <h3><?php echo htmlspecialchars($data[1]); ?></h3>
         </div>
         <hr>
