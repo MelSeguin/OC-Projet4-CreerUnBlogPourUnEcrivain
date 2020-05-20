@@ -13,6 +13,10 @@
     <hr>
   </div>
   <div class="flags-list">
+    <?php if($nbComment[0] == 0) :?>
+    <p> Vous n'avez pas de commentaire à modérer. <a href="index.php?action=admin"><br/>
+      Retour à la liste des articles </a>?</p>
+    <?php else :?>
     <table>
       <tr>
           <th>COMMENTAIRES SIGNALES</th>
@@ -20,7 +24,7 @@
           <th>VALIDER</th>
           <th>SUPPRIMER</th>
       </tr>
-      <?php while( $comments = $getComments -> fetch()):?>
+      <?php while($comments = $getComments -> fetch()):?>
       <?php if ($comments['comment_flag'] == 1) :?>
       <tr>
         <td><?php echo $comments['comment_content'] ?></td>
@@ -30,13 +34,8 @@
       </tr>
       <?php endif; ?>
       <?php endwhile; ?>
-
-      <?php if(empty($comments)) :?>
-        <p> Vous n'avez pas de commentaire à modérer. <a href="index.php?action=admin"><br/>
-          Retour à la liste des articles </a>?</p>
-      <?php endif; ?>
-
     </table>
+    <?php endif; ?>
   </div>
 
 <?php $content = ob_get_clean(); ?>
