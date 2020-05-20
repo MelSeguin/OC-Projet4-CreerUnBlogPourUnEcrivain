@@ -86,6 +86,7 @@ hr {
   margin-top: 2%;
   margin-bottom: 1%;
 }
+
 /*LISTPOSTVIEW*/
 .listposts-section{
   display: flex;
@@ -136,7 +137,6 @@ hr {
   color: #1D678C;
 }
 
-
 /*postView*/
 
 .post-container{
@@ -145,6 +145,7 @@ hr {
 }
 .post-container h2{
   font-family: 'Indie Flower', cursive;
+  color: #053861;
   font-size : 2em;
   font-weight: 700;
   font-style: italic;
@@ -401,6 +402,7 @@ hr {
 }
 .edit-post-container h2{
   font-family: 'Indie Flower', cursive;
+  color: #053861;
   font-size : 2em;
   font-weight: 700;
   font-style: italic;
@@ -522,6 +524,7 @@ hr {
 /*flagsView*/
 .flags-head h2{
   font-family: 'Indie Flower', cursive;
+  color: #053861;
   font-size : 2em;
   font-weight: 700;
   font-style: italic;
@@ -538,6 +541,20 @@ hr {
   height : 1px;
   margin-top: 2%;
   margin-bottom: 3%;
+}
+.flags-list p{
+  font-family: 'montserrat',sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+.flags-list a{
+  text-decoration: none;
+  color: inherit;
+}
+.flags-list a:hover{
+  font-style:italic;
+  font-weight: bold;
+  color : #1D678C;
 }
 .flags-list table {
   margin : 5% auto 3% auto;
@@ -576,6 +593,9 @@ hr {
   font-weight: bold;
   color : #ffffff;
 }
+
+/*logoutView*/
+
 footer{
   background-image: linear-gradient(to bottom right,#1D678C,#053861);
   height : 80px;
