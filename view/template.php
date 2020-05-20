@@ -71,7 +71,7 @@
       <header>
         <div class="header-title">
           <h1 class="main-title"> Billet simple pour l'Alaska</h1>
-            <p class="main-subtitle"> un roman de Jean De Forteroche <i class="fas fa-feather-alt"></i></p>
+            <p class="main-subtitle"> un roman de Jean Forteroche <i class="fas fa-feather-alt"></i></p>
         </div>
       </header>
       <section class="page-content">
