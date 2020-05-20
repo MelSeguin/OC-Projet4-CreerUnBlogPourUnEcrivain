@@ -607,6 +607,41 @@ hr {
 }
 
 /*logoutView*/
+.logout{
+  width : 45%;
+  height: 60%;
+  margin : 5% auto 2% auto;
+  border : 1px solid #DAE0E2;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #3d3d3dbd;
+}
+.logout h2{
+  border-left: 5px solid #053861;
+  font-family: 'Indie Flower', cursive;
+  font-size : 2em;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  color: #053861;
+  margin-top : 5%;
+  margin-bottom: 2%;
+}
+.logout p{
+  font-family: "montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 7%;
+}
+
+.logout hr{
+  width: 15%;
+  border: none;
+  background-color: #053861bd;
+  height : 1px;
+  margin-top: 2%;
+  margin-bottom: 7%;
+}
+
 
 footer{
   background-image: linear-gradient(to bottom right,#1D678C,#053861);

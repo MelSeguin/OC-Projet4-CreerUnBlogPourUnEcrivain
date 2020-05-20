@@ -3,14 +3,16 @@
 <?php ob_start(); ?>
 
   <div class="navbar">
-    <a class="navlink" href="index.php?action=listPosts"> Retour à la page d'accueil</a>
-    <a class="navlink"href="index.php?action=loginForm"> CONNEXION </a>
+    <a class="navlink" href="index.php?action=listPosts"> <i class="fas fa-home"></i> </a>
+    <a class="navlink" href="index.php?action=loginForm"> <i class="fas fa-sign-in-alt"></i>  CONNEXION </a>
   </div>
 
-  <h1> Billet simple pour l'Alaska </h1>
-
-    <p> Vous êtes bien déconnecté ...<p>
-
+  <div class="logout">
+    <h2> Déconnexion </h2>
+    <hr>
+    <p> Vous êtes bien déconnecté. <br/>
+      À bientôt !</p>
+  </div>
 
 <?php $content = ob_get_clean(); ?>
 
