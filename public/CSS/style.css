@@ -519,6 +519,63 @@ hr {
   color: #ffffff;
 }
 
+/*flagsView*/
+.flags-head h2{
+  font-family: 'Indie Flower', cursive;
+  font-size : 2em;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin-top : 7%;
+}
+.flags-head p{
+
+}
+.flags-head hr{
+  width: 15%;
+  border: none;
+  background-color: #053861bd;
+  height : 1px;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+.flags-list table {
+  margin : 5% auto 3% auto;
+  border-collapse: collapse;
+  border : 1px solid #DAE0E2;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #3d3d3dbd;
+  width : 70%;
+}
+
+.flags-list th{
+  border-collapse: collapse;
+  text-align: center;
+  font-weight: 200;
+  background-color: #1D678Cbd;
+  color :#ffffff;
+  padding : 3%;
+}
+.flags-list tr{
+  border-bottom: 1px solid #1D678C47;
+  text-align: center;
+}
+
+.flags-list tr:hover{
+  background-color: #1D678C47;
+}
+.flags-list td {
+  padding:2%;
+}
+.flags-list td a{
+  text-decoration: none;
+  color:inherit;
+}
+.flags-list td a:hover{
+  font-style:italic;
+  font-weight: bold;
+  color : #ffffff;
+}
 footer{
   background-image: linear-gradient(to bottom right,#1D678C,#053861);
   height : 80px;
