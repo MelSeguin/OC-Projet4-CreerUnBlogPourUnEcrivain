@@ -2,6 +2,8 @@
 
 <?php ob_start(); ?>
 
+
+
   <div class="login-fieldset">
     <h2> Connexion </h2>
     <?php
@@ -12,7 +14,8 @@
     <form class="login-form" action="index.php?action=login" method="post">
       <i class="fas fa-user"></i><input type="text" name="name" placeholder="Nom d'utilisateur" value="" required> <br/>
       <i class="fas fa-lock"></i><input type="password" name="password" placeholder="Mot de passe" value="" required><br/>
-      <input type="submit" name="submit" value="Me connecter">
+      <input type="submit" name="submit" value="ME CONNECTER"><br/>
+      <a href="index.php?action=listPosts"> RETOUR A LA PAGE D'ACCUEIL</a>
     </form>
     <br/>
   </div>

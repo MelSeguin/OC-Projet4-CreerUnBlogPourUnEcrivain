@@ -324,6 +324,7 @@ hr {
   font-size: 0.9em;
   width : 30%;
   margin-top: 7%;
+  margin-bottom: 3%;
   border-radius: 20px;
   background-color: #053861;
   border : 2px solid #ffffff;
@@ -335,6 +336,17 @@ hr {
   background-color: #ffffff;
   border : 2px solid #053861;
   color: #053861;
+}
+
+.login-fieldset a{
+  font-family: "montserrat", sans-serif;
+  font-size: 0.8em;
+  color : #3d3d3d;
+  cursor: pointer;
+}
+.login-fieldset a:hover{
+  color: #053861;
+  font-weight: bold;
 }
 
 /* adminView */
