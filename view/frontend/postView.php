@@ -4,9 +4,7 @@
 
 <div class="navbar">
     <?php if (isset($_SESSION['name'])): ?>
-      <a class ="navlink" href="index.php?action=listPosts"> VOIR MON BLOG </a>
-      <a class ="navlink"href="index.php?action=admin"> <i class="fas fa-home"></i> </a>
-
+      <a class ="navlink"href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i></a>
     <?php else: ?>
       <a class ="navlink" href="index.php?action=listPosts"> <i class="fas fa-home"></i> RETOUR A L'ACCUEIL DU BLOG</a>
     <?php endif; ?>
@@ -27,12 +25,14 @@
         <h2 class = "title2"> <?php echo htmlspecialchars($post[1]); ?> </h2>
           <hr>
             <p> <?php echo nl2br($post[2]); ?> </p>
-          <hr>
       </div>
     <?php endif; ?>
   </section>
+  <hr>
   <section class ="comments-section" >
-    <h3>Commentaires</h3>
+    <div class="comment-section-tle3">
+      <h3>Commentaires</h3>
+    </div>
     <div class="comments-container">
       <?php while ($comment = $comments->fetch()):?>
         <?php if($comment[1] == $post[0]) :?>
@@ -72,11 +72,9 @@
       <?php if(!isset($_SESSION['name'])) : ?>
       <!-- afficher le formulaire pour ajouter un commentaire -->
       <div class="form">
-          <h5> <i class="fas fa-comment-alt"></i> COMMENTER </h5>
+          <h5> <i class="fas fa-comment-alt"></i>  COMMENTER </h5>
             <form class="comments-form" action="index.php?action=addComment&amp;id=<?= $post[0] ?>" method="post">
-              <label for="author"> Pseudo </label> <br/>
-              <input type="text" name="author" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>" required><br/>
-              <label for="comment"> Commentaire </label> <br/>
+              <i class="fas fa-user"></i> <input type="text" name="author"  placeholder="Pseudo" required><br/>
               <textarea name="comment" required> </textarea> <br/>
               <input type="submit" name="submit" value="Envoyer">
             </form>
