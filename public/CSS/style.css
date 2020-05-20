@@ -100,7 +100,6 @@ hr {
   width : 50%;
   height: 60%;
   margin : 2% auto 2% auto;
-
   border : 1px solid #DAE0E2;
   border-radius: 10px;
   box-shadow: 1px 2px 3px #3d3d3dbd;
@@ -148,11 +147,16 @@ hr {
 /*postView*/
 
 .post-container{
-  width: 65%;
-  margin : auto;
+  width : 55%;
+  /* padding: 5%; */
+  margin : 2% auto 2% auto;
+  border : 1px solid #DAE0E2;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #3d3d3dbd;
 }
 .post-container h2{
   font-family: 'Indie Flower', cursive;
+  border-left : 5px solid #053861;
   color: #053861;
   font-size : 2em;
   font-weight: 700;
@@ -162,8 +166,8 @@ hr {
   margin-bottom: 5%;
 }
 .post-container p{
-  padding : 0 2% 2% 2%;
-  margin: auto;
+  width : 90%;
+  margin: auto 5% 5% auto;
 }
 
 .comments-section{
@@ -456,7 +460,7 @@ hr {
 
 .edit-post-container input[type="checkbox"] {
   position: absolute;
-  bottom : 17em;
+  bottom : 14.5em;
   margin-left: 17.6em;
   cursor : pointer;
   opacity: 0;
