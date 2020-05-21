@@ -22,6 +22,7 @@ require_once('model/CommentManager.php');
 
     $post = $postManager -> getPost($postId);
     $comments = $commentManager-> getComments($postId);
+    $nbCommentsByPost = $commentManager -> countCommentsByPost($postId);
 
     require('view/frontend/postView.php');
   }

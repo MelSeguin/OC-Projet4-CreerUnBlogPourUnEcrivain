@@ -15,6 +15,17 @@
     return $comments;
   }
 
+  // fonction pour compter le nombre de commentaires par articles
+    function countCommentsByPost($postId){
+      $db = $this -> dbConnect();
+
+      $req = $db -> prepare('SELECT COUNT(*) FROM comments WHERE post_id=?');
+      $req -> execute(array($postId));
+      $number = $req -> fetch();
+
+      return $number;
+    }
+
 // fonction pour poster un commentaire
   public function postComment($postId, $author, $comment) {
 

@@ -92,9 +92,31 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  min-height: 400px;
 }
-.no-post{
-
+.no-posts{
+  width : 45%;
+  height: 60%;
+  margin : auto;
+  border : 1px solid #DAE0E2;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #3d3d3dbd;
+}
+.no-posts p{
+  font-family: "montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 7% auto 7% auto ;
+  border-left : 5px solid #053861 ;
+}
+.no-posts a{
+  text-decoration: none;
+  color: inherit;
+}
+.no-posts a:hover{
+  font-style:italic;
+  font-weight: bold;
+  color : #1D678C;
 }
 .listposts-container{
   width : 50%;
@@ -203,7 +225,14 @@ hr {
   justify-content: space-evenly;
   width: 56%;
 }
-
+.no-comments p{
+  margin-top: 35%;
+  text-align: center;
+  font-style:italic;
+  font-family: "Montserrat", sans-serif;
+  color : #3d3d3dbd;
+  font-size: 1.1em;
+}
 .comment-container{
   background-color: #ffffff;
   width : 85%;

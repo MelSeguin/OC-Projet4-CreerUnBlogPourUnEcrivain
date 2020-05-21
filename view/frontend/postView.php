@@ -9,24 +9,17 @@
       <a class ="navlink" href="index.php?action=listPosts"> <i class="fas fa-home"></i> RETOUR A L'ACCUEIL DU BLOG</a>
     <?php endif; ?>
   </div>
+
 <div class="postView-main-container">
   <section class="post-container">
     <?php if ($post == false) : ?>
-      <p> Ce chapitre n'est pas disponible.
-
-      <?php if (isset($_SESSION['name'])): ?>
-        <a href="index.php?action=admin"> Retour à la liste des chapitres</a> ?
-      <?php else: ?>
-        <a href="index.php?action=listPosts"> Retour à la page d'accueil</a> ?
-      <?php endif; ?>
-      </p>
+      <p class ="no-post"> Ce chapitre n'est pas disponible.</p>
     <?php  elseif ($post !== false) : ?>
       <div class="post">
         <h2 class = "title2"> <?php echo htmlspecialchars($post[1]); ?> </h2>
           <hr>
             <p> <?php echo nl2br($post[2]); ?> </p>
       </div>
-    <?php endif; ?>
   </section>
   <hr>
   <section class ="comments-section" >
@@ -34,6 +27,12 @@
       <h3>Commentaires</h3>
     </div>
     <div class="comments-container">
+      <!-- si l'article n'a pas encore de commentaires ou si les commentaires ne sont pas associés à l'id du post-->
+      <?php if($nbCommentsByPost[0] == 0) : ?>
+        <div class="no-comments">
+            <p> Cet article n'a pas encore de commentaire...</p>
+        </div>
+      <?php else : ?>
       <?php while ($comment = $comments->fetch()):?>
         <?php if($comment[1] == $post[0]) :?>
           <div class="comment-container">
@@ -61,12 +60,8 @@
           <?php endif; ?>
           </div>
         <?php endif;?>
-        <?php endwhile; ?>
-      <!-- si l'article n'a pas encore de commentaires ou si les commentaires ne sont pas associés à l'id du post-->
-      <?php if (empty($comments)||$comment[1] !== $post[0]) : ?>
-        <p> Cet article n'a pas encore de commentaire</p>
-      <?php endif; ?>
-      <!-- si l'utilisateur n'est pas connecté -->
+      <?php endwhile; ?>
+    <?php endif;?>
     </section>
     <section class="comment-form-container">
       <?php if(!isset($_SESSION['name'])) : ?>
@@ -81,7 +76,8 @@
       </div>
       <?php endif; ?>
     </section>
-    </div>
+  </div>
+  <?php endif; ?>
 </div>
 
 <?php $content = ob_get_clean(); ?>

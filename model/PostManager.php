@@ -13,18 +13,7 @@
     return $posts;
   }
 
-//fonction pour compter le nombre d'articles publiés
-  public function postCount(){
-    $db = $this -> dbConnect();
-
-    $req = $db -> prepare('SELECT COUNT(*) FROM posts WHERE post_published = "yes"');
-    $req -> execute(array());
-    $number = $req -> fetch();
-
-    return $number;
-  }
-
-//récupérer un article en particulier
+//récupérer un article précis
   public function getPost($postId){
     $db = $this -> dbConnect();
 
@@ -50,6 +39,7 @@
 
     return $savedPost;
   }
+
 
 //modifier un article dans la base de données
   public function updatePost($postId,$postTitle,$postContent,$postPublished){
@@ -82,6 +72,5 @@
         throw new Exception("Cet article n'a pas pu être supprimé. Merci de réessayer plus tard. ");
     }
   }
-
 }
 ?>
