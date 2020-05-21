@@ -121,7 +121,7 @@ hr {
   font-family: "Indie Flower", cursive;
   font-style: italic;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-align: center;
   color: #053861;
   border-left: 5px solid #053861;
@@ -167,6 +167,14 @@ hr {
 .post-container p{
   width : 90%;
   margin: auto 5% 5% auto;
+}
+.no-post{
+  text-align:center;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.1em;
+  margin: auto;
+  padding-left: 6%;
+  border-left : 5px solid #053861;
 }
 
 .comments-section{
@@ -241,7 +249,15 @@ hr {
   color : #3d3d3d;
   text-decoration: none;
 }
-
+.delete-comment{
+  font-size: 1em;
+  text-align: right;
+  padding-right: 5%;
+}
+.delete-comment a{
+  color : #3d3d3d;
+  text-decoration: none;
+}
 .comment-form-container{
   position : relative;
 }
