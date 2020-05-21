@@ -8,10 +8,12 @@ require_once('model/CommentManager.php');
   function listPosts() {
 
     $postManager = new PostManager();
-    $posts = $postManager->getPosts();
+
+    $posts = $postManager -> getPosts();
+    $nbPosts = $postManager -> postCount();
 
     require('view/frontend/listPostsView.php');
-  }
+}
 
 //fonction pour obtenir un article en particulier
   function post($postId) {
@@ -52,4 +54,4 @@ require_once('model/CommentManager.php');
           echo "<a href='index.php?action=listPosts'> Retour à la liste des articles </a>";
       }
   }
-  ?>
+?>
