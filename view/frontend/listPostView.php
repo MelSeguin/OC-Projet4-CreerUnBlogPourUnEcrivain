@@ -17,46 +17,38 @@
     </div>
 
     <section class = "listposts-section">
-
-      <?php while( $data = $posts -> fetch()):?> <!-- récupérer les infos dans un array -->
-
-    <!-- ATTENTION QQCH NE MARCHE PAS AVEC CETTE PORTION DE CODE -->
-
-      <!--si l'array $data est vide -->
-      <?php if ($data == false) : ?>
-        <div class="no-post">
-          <p> Il n'y a pas encore d'article à afficher </p>
+      <?php if($nbPosts[0] == 0) :?>
+        <div class="no-posts">
+          <p> Il n'y a pas encore d'article à afficher.<br/>
         <?php if (isset($_SESSION['name'])): ?>
-          <p> <a href="index.php?action=newPost"> Créer une nouvelle publication ? </a></p>
+          <a href="index.php?action=newPost"> Commencer à écrire ? </a></p>
         </div>
         <?php endif; ?>
+      <?php else :?>
+      <?php while( $data = $posts -> fetch()):?> <!-- récupérer les infos dans un array -->
 
-
-    <!-- FIN DE LA PORTION DE CODE QUI NE MARCHE PAS -->
-
-      <!-- Sinon, s'il y a des données dans l'array $data -->
-    <?php elseif($data[4] == "yes") :?>
-      <div class="listposts-container">
-      <a href="index.php?action=post&amp;id=<?= $data[0] ?>">
-        <div class="listposts-head">
-          <p><?php echo htmlspecialchars($data[3]); ?></p>
-          <h3><?php echo htmlspecialchars($data[1]); ?></h3>
-        </div>
-        <hr>
-        <div class="listposts-content">
+      <?php if($data[4] == "yes") :?>
+        <div class="listposts-container">
+          <a href="index.php?action=post&amp;id=<?= $data[0] ?>">
+          <div class="listposts-head">
+            <p><?php echo htmlspecialchars($data[3]); ?></p>
+            <h3><?php echo htmlspecialchars($data[1]); ?></h3>
+          </div>
+          <hr>
+          <div class="listposts-content">
           <?php echo substr($data[2], 0, 650).'...';?>
-        </div>
+          </div>
 
-        <div class="listposts-footer">
-          <a href="index.php?action=post&amp;id=<?= $data[0] ?>"> Découvrir la suite... </a>
-        </div>
-      </a>
-    </div><!--FIN de else if -->
-  <?php endif;?> <!-- FIN DU IF-->
-  <?php endwhile; ?> <!-- FIN de la boucle while -->
+          <div class="listposts-footer">
+            <a href="index.php?action=post&amp;id=<?= $data[0] ?>"> Découvrir la suite... </a>
+          </div>
+        </a>
+      </div>
+  <?php endif;?>
+  <?php endwhile; ?>
   <?php $posts -> closeCursor(); ?>
   </section>
-
+<?php endif; ?>
 
 <?php $content = ob_get_clean(); ?>
 
