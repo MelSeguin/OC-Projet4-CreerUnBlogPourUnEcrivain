@@ -4,56 +4,56 @@
 //classe pour gérer les fonctions liées aux commentaires
  class CommentManager extends Manager {
 
-  //fonction pour récupérer les commentaires
-    public function getComments($postId) {
+//fonction pour récupérer les commentaires
+  public function getComments($postId) {
 
-      $db = $this -> dbConnect();
+    $db = $this -> dbConnect();
 
-      $comments = $db -> prepare('SELECT * FROM comments ORDER BY comment_date');
-      $comments -> execute(array($postId));
+    $comments = $db -> prepare('SELECT * FROM comments ORDER BY comment_date');
+    $comments -> execute(array($postId));
 
-      return $comments;
-    }
+    return $comments;
+  }
 
 // fonction pour poster un commentaire
-    public function postComment($postId, $author, $comment) {
+  public function postComment($postId, $author, $comment) {
 
-      $db = $this->dbConnect();
-      $comments = $db->prepare('INSERT INTO comments (id, post_id, comment_author,comment_date, comment_content, comment_flag) VALUES(NULL,?, ?, NOW(), ?, false)');
-      $affectedLines = $comments ->execute(array($postId, $author, $comment));
+    $db = $this->dbConnect();
+    $comments = $db->prepare('INSERT INTO comments (id, post_id, comment_author,comment_date, comment_content, comment_flag) VALUES(NULL,?, ?, NOW(), ?, false)');
+    $affectedLines = $comments ->execute(array($postId, $author, $comment));
 
-      return $affectedLines;
-    }
+    return $affectedLines;
+  }
 
 //fonction pour supprimer un commentaire
-    public function deleteComment($commentId) {
-      $db = $this -> dbConnect();
+  public function deleteComment($commentId) {
+    $db = $this -> dbConnect();
 
-      $deleteComment = $db -> prepare('DELETE FROM comments WHERE id = :commentId');
-      $commentIsDeleted = $deleteComment -> execute(array(':commentId' => $commentId ));
+    $deleteComment = $db -> prepare('DELETE FROM comments WHERE id = :commentId');
+    $commentIsDeleted = $deleteComment -> execute(array(':commentId' => $commentId ));
 
-      return $commentIsDeleted;
-    }
+    return $commentIsDeleted;
+  }
 
 //fonction pour signaler un commentaire
-    function setFlag($commentId){
-      $db = $this -> dbConnect();
+  function setFlag($commentId){
+    $db = $this -> dbConnect();
 
-      $setFlag = $db -> prepare ('UPDATE comments SET comment_flag = TRUE WHERE id = :commentId ');
-      $flagIsSet = $setFlag -> execute(array(':commentId' => $commentId));
+    $setFlag = $db -> prepare ('UPDATE comments SET comment_flag = TRUE WHERE id = :commentId ');
+    $flagIsSet = $setFlag -> execute(array(':commentId' => $commentId));
 
-      return $flagIsSet;
-    }
+    return $flagIsSet;
+  }
 
 //fonction pour récupérer les commentaires signalés
-    function getFlaggedComments(){
-      $db = $this -> dbConnect();
+  function getCommentsByPost(){
+    $db = $this -> dbConnect();
 
-      $getFlaggedComments = $db -> prepare ('SELECT * FROM comments, posts WHERE comments.post_ID = posts.id ');
-      $getFlaggedComments -> execute(array());
+    $getCommentsByPost = $db -> prepare('SELECT * FROM comments, posts WHERE comments.post_ID = posts.id');
+    $getCommentsByPost -> execute(array());
 
-      return $getFlaggedComments;
-    }
+    return $getCommentsByPost;
+  }
 
 //fonction pour récupérer le nombre de commentaires signalés
   public function commentsCount(){
@@ -67,13 +67,13 @@
   }
 
 //fonction pour valider un commentaire signalé
-    function unsetFlag($commentId){
-      $db = $this -> dbConnect();
+  function unsetFlag($commentId){
+    $db = $this -> dbConnect();
 
-      $setFlag = $db -> prepare ('UPDATE comments SET comment_flag = FALSE WHERE id = :commentId ');
-      $flagIsSet = $setFlag -> execute(array(':commentId' => $commentId));
+    $setFlag = $db -> prepare ('UPDATE comments SET comment_flag = FALSE WHERE id = :commentId ');
+    $flagIsSet = $setFlag -> execute(array(':commentId' => $commentId));
 
-      return $flagIsUnset;
-    }
+    return $flagIsUnset;
+  }
 }
 ?>
