@@ -45,6 +45,7 @@
               <p><?php echo $comment[4];?></p>
             </br>
           </div>
+          <?php if(!isset($_SESSION['name'])) :?>
           <div class="signal-container">
             <?php if($comment[5] == true):?> <!-- si le commentaire est déjà signalé afficher la confirmation -->
             <p class="signaled-comment"><em> Commentaire signalé</em></p>
@@ -53,12 +54,11 @@
             <?php endif;?>
           </div>
           <!-- si l'utilisateur est connecté, afficher l'icône pour supprimer le commentaire -->
-          <?php if (isset($_SESSION['name'])) : ?>
+          <?php elseif (isset($_SESSION['name'])) : ?>
             <div class="delete-comment">
-              <a href ="index.php?action=deleteComment&amp;id=<?= $post[0] ?>"> <i class="fas fa-trash"></i></a>
+              <a href ="index.php?action=deleteComment&amp;id=<?= $post[0] ?>"> <i class="fas fa-trash"></i> supprimer</a>
             </div>
           <?php endif; ?>
-          </div>
         <?php endif;?>
       <?php endwhile; ?>
     <?php endif;?>
