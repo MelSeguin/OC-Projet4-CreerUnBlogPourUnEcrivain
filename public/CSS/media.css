@@ -102,7 +102,7 @@
     height : 3em;
   }
   .navbar a,.navbar p,.navbar i {
-    font-size: 1.1em ;
+    font-size: 1em ;
   }
 
   /*LISTPOSTVIEW*/
@@ -110,7 +110,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 400px;
+    min-height: 200px;
   }
   .no-posts{
     width : 45%;
@@ -137,72 +137,17 @@
     color : #1D678C;
   }
   .listposts-container{
-    width : 50%;
-    height: 60%;
-    margin : 2% auto 2% auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
-  }
-  .listposts-container:hover {
-    border : 1px solid #053861;
-    box-shadow: 2px 4px 6px #3d3d3dbd;
-  }
-  .listposts-container a{
-    text-decoration: none;
-    color : inherit;
-  }
-  .listposts-head p{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.9em;
-    margin-left: 5%;
-  }
-  .listposts-head h3{
-    font-family: "Indie Flower", cursive;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.8em;
-    text-align: center;
-    color: #053861;
-    border-left: 5px solid #053861;
-    width : 100%;
-
-  }
-  .listposts-content{
-    padding: 5% 12% 2% 12%;
-  }
-  .listposts-footer{
-    text-align: right;
-    padding: 3%;
-  }
-  .listposts-footer a{
-    color : #1D678Cbd;
-    text-decoration: none;
-  }
-  .listposts-footer:hover{
-    font-weight : bold;
-    color: #1D678C;
+    width : 80%;
   }
 
   /*postView*/
 
   .post-container{
-    width : 55%;
-    margin : 2% auto 2% auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
+    width : 65%;
+    margin : 2% auto 2% 10%;
   }
   .post-container h2{
-    font-family: 'Indie Flower', cursive;
-    border-left : 5px solid #053861;
-    color: #053861;
-    font-size : 2em;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    margin-top : 7%;
-    margin-bottom: 5%;
+    font-size : 1.8em;
   }
   .post-container p{
     width : 90%;
@@ -218,31 +163,14 @@
   }
 
   .comments-section{
-    display: flex;
-    width: 100%;
-    min-height: 400px;
-    position: relative;
+    width: 80%;
+    min-height: 200px;
   }
 
   .comments-section-tle3{
-    font-family: 'Indie Flower', cursive;
-    font-style: italic;
-    font-weight: 700;
-    color : #053861;
-    font-size: 1.8em;
-    text-align: left;
-    margin-top: 3% ;
-    margin-bottom: auto;
-    padding : 4%;
+    font-size: 1.5em;
   }
 
-  .comments-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 56%;
-  }
   .no-comments p{
     margin-top: 35%;
     text-align: center;
@@ -251,70 +179,9 @@
     color : #3d3d3dbd;
     font-size: 1.1em;
   }
-  .comment-container{
-    background-color: #ffffff;
-    width : 85%;
-    margin-top: 5%;
-    border-left : 2px solid #053861;
-    border-right : 2px solid #053861;
-    border-radius: 15px;
-  }
-  .comment-infos{
-    font-size: 0.9em;
-    height: 20%;
-  }
-  .comment-date{
-    font-size: 0.8em;
-    color : #3d3d3d;
-    margin-left: 2%;
-  }
-  .comment-author{
-    font-size: 1.2em;
-    font-family: "montserrat", sans-serif;
-    font-weight: 400;
-    color : #053861;
-    margin-bottom: 2%;
-    margin-left: 5%;
-  }
-  .comment-content{
-    align-items: center;
-    font-size: 1em;
-    margin : 5% 12% auto 8%;
-  }
 
-  .signal-container{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.8em;
-    text-align: right;
-    padding :2%;
-  }
-  .signaled-comment{
-    color : #BB0B0B;
-    font-weight: 700;
-  }
-  .signal-container a{
-    color : #3d3d3d;
-    text-decoration: none;
-  }
-  .delete-comment{
-    font-size: 1em;
-    text-align: right;
-    padding-right: 5%;
-  }
-  .delete-comment a{
-    color : #3d3d3d;
-    text-decoration: none;
-  }
-  .comment-form-container{
-    position : relative;
-  }
   .form {
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    font-family: "montserrat", sans-serif;
-    width : 20%;
+    width : 27%;
     margin : 2% auto 2% auto;
     border : 1px solid #DAE0E2;
     border-radius: 10px;
@@ -324,288 +191,48 @@
     right : 3%;
     z-index : 2;
   }
-  .form h5{
-    width  : 100%;
-    text-align: center;
-    border-left : 5px solid #053861;
-    font-size: 1em;
-    font-family: "montserrat", sans-serif;
-    color : #053861;
-  }
-  .form input[type=text]{
-    width : 82%;
-    font-family: "montserrat", sans-serif;
-    font-size: 1em;
-    border: none;
-    border-bottom: 1px solid #053861bd;
-    margin : 5% auto 10% auto;
-    padding : 1%;
-    position: relative;
-  }
-  .form textarea {
-    width : 95%;
-    height : 120px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    font-family: "montserrat", sans-serif;
-    border :1px solid #053861bd;
-    margin-bottom: 5%;
-  }
-
-  .form  input[type=submit]{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.9em;
-    width : 50%;
-    margin-bottom: 5%;
-    border-radius: 20px;
-    background-color: #053861;
-    border : 2px solid #ffffff;
-    color: #ffffff;
-    padding : 2%;
-    cursor : pointer;
-  }
-  .form input[type=submit]:hover{
-    background-color: #ffffff;
-    border : 2px solid #053861;
-    color: #053861;
-  }
-
   /* loginView */
 
   .login-fieldset{
-    width : 45%;
-    height: 60%;
-    margin : 2% auto 2% auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
+    width : 65%;
+    margin : 5% auto 5% auto;
   }
   .login-fieldset h2 {
-    border-left: 5px solid #053861;
-    font-family: 'Indie Flower', cursive;
-    font-size : 2em;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    color: #053861;
-    margin-top : 5%;
-    margin-bottom: 2%;
-  }
-  .login-fieldset p{
-    font-family: "montserrat", sans-serif;
-    text-align: center;
-    color : #BB0B0B;
-  }
-  .login-form{
-    text-align: center;
-  }
-  .fa-user, .fa-lock{
-    color : #3d3d3d;
-    font-size: 1.2em;
-    margin-right: 2%;
-  }
-
-  .login-form input[type=text], input[type=password] {
-    margin : 5% auto auto auto;
-    font-family: "montserrat", sans-serif;
-    font-size: 1em;
-    border: none;
-    border-bottom: 1px solid #053861bd;
-    padding : 1%;
-    position: relative;
-  }
-  .login-form  input[type=submit]{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.9em;
-    width : 30%;
-    margin-top: 7%;
-    margin-bottom: 3%;
-    border-radius: 20px;
-    background-color: #053861;
-    border : 2px solid #ffffff;
-    color: #ffffff;
-    padding : 2%;
-    cursor : pointer;
-  }
-  .login-form input[type=submit]:hover{
-    background-color: #ffffff;
-    border : 2px solid #053861;
-    color: #053861;
-  }
-
-  .login-fieldset a{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.8em;
-    color : #3d3d3d;
-    cursor: pointer;
-  }
-  .login-fieldset a:hover{
-    color: #053861;
-    font-weight: bold;
+    font-size : 1.8em;
   }
 
   /* adminView */
 
   .admin-subtitle{
-    margin : 4% auto 3% auto;
-    font-family: "montserrat",sans-serif;
-    text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
-  .admin-subtitle a{
-    text-decoration: none;
-    color: inherit;
-  }
-  .admin-subtitle a:hover{
-    font-style:italic;
-    font-weight: bold;
-    color : #1D678C;
-  }
-  .admin-listposts{
-    margin : 5% auto 3% auto;
-    border-collapse: collapse;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
-    width : 70%;
-  }
-  .admin-listposts th{
-    text-align: center;
-    font-weight: 200;
-    background-color: #1D678Cbd;
-    color :#ffffff;
-    padding : 3%;
-  }
-  .admin-listposts tr{
-    padding: 3%;
-    border-bottom: 1px solid #1D678C47;
-    text-align: center;
-  }
-  .admin-listposts tr:hover{
-    background-color: #1D678C47;
-  }
-  .admin-listposts td a{
-    text-decoration: none;
-    color:inherit;
-  }
-  .admin-listposts td a:hover{
-    font-style:italic;
-    font-weight: bold;
-    color : #ffffff;
-  }
-  .admin-listposts .green-circle{
-    color: #34C924;
-    font-size: 1.1em;
-  }
-  .admin-listposts .grey-circle{
-    color: #D8DFE3;
-    font-size: 1.1em;
+  .admin-container{
+    min-height: 240px;
   }
 
   /*createPostView et updatepostview*/
   .edit-post-container{
-    width : 70%;
+    width : 80%;
     margin: auto;
   }
-  .edit-post-container h2{
-    font-family: 'Indie Flower', cursive;
-    color: #053861;
-    font-size : 2em;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    margin-top : 5%;
-  }
-  .edit-post-container hr{
-    width: 15%;
-    border: none;
-    background-color: #053861bd;
-    height : 1px;
-    margin-top: 2%;
-    margin-bottom: 3%;
-  }
-  .edit-post-container form{
-    margin-bottom: 2em;
-  }
   .edit-post-container i{
-    color : #053861;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
-  .edit-post-container input[type=text]{
-    margin : 5% auto 2% auto;
-    font-family: "montserrat", sans-serif;
-    width : 35%;
-    font-size: 1em;
-    border: none;
-    border-bottom: 2px solid #053861;
-    padding : 1%;
+  .edit-post-container input[type="text"]{
+    margin-right: 1em;
   }
-
   .edit-post-container input[type="checkbox"] {
-    position: absolute;
-    bottom : 14.5em;
-    margin-left: 17.6em;
-    cursor : pointer;
+    bottom : 23em;
+    margin-left: 2em;
     opacity: 0;
-    z-index: 1;
   }
   .edit-post-container label {
-    font-family: "montserrat", sans-serif;
     font-size: .9em;
-    position: relative;
-    margin-right : 2em;
-    margin-left: 16em;
-    padding-top: 0.4em;
-    padding-left: 2em;
-    padding-right: 1em;
-    cursor: pointer;
+    margin-right : 0.5em;
+    margin-left: 1.5em;
   }
-  .edit-post-container label::before {
-      box-sizing: border-box;
-      content: " ";
-      position: absolute;
-      top: 0.3em;
-      left: 0;
-      display: block;
-      width: 1.3em;
-      height: 1.3em;
-      border: 2px solid #053861;
-      border-radius: .25em;
-      z-index: -1;
-    }
-
-  .edit-post-container input[type="chekbox"] + label::before {
-    border-radius: 1em;
-  }
-
-    /* Checked */
-  .edit-post-container input[type="checkbox"]:checked + label {
-    padding-left: 1em;
-  }
-  .edit-post-container input[type="checkbox"]:checked + label::before {
-      top: 0;
-      width: 100%;
-      height: 2em;
-      background-color:#ffffff;
-      border : 2px solid #34C924;
-      border-radius: 20px;
-    }
-
-    /* Transition */
-  .edit-post-container label, label::before {
-    transition: .25s all ease;
-  }
-
   .edit-post-container input[type=submit]{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.9em;
-    margin-right: 2em;
-    border-radius: 20px;
-    background-color: #053861;
-    border : 2px solid #ffffff;
-    color: #ffffff;
-    padding : 1%;
-    cursor : pointer;
+    margin-right: 0.5em;
   }
   .edit-post-container input[type=submit]:hover{
     background-color: #ffffff;
@@ -632,7 +259,7 @@
   .flags-head h2{
     font-family: 'Indie Flower', cursive;
     color: #053861;
-    font-size : 2em;
+    font-size : 1.8em;
     font-weight: 700;
     font-style: italic;
     text-align: center;
@@ -713,7 +340,7 @@
   .logout h2{
     border-left: 5px solid #053861;
     font-family: 'Indie Flower', cursive;
-    font-size : 2em;
+    font-size : 1.8em;
     font-weight: 700;
     font-style: italic;
     text-align: center;
@@ -1037,7 +664,7 @@
   .edit-post-container{
     width : 90%;
   }
-  .edit-post-container h2{
+  .edit-post-container {
     font-size : 1.5em;
     margin-top: 5%;
   }
