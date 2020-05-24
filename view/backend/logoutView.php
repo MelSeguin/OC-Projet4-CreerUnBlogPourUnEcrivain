@@ -3,8 +3,8 @@
 <?php ob_start(); ?>
 
   <div class="navbar">
-    <a class="navlink" href="index.php?action=listPosts"> <i class="fas fa-home"></i> </a>
-    <a class="navlink" href="index.php?action=loginForm"> <i class="fas fa-sign-in-alt"></i>  CONNEXION </a>
+    <a href="index.php?action=listPosts"> <i class="fas fa-home"></i> </a>
+    <a href="index.php?action=loginForm"> <i class="fas fa-sign-in-alt"></i><p> CONNEXION </p></a>
   </div>
 
   <div class="logout">

@@ -2,11 +2,11 @@
 
 <?php ob_start(); ?>
 
-<div class="navbar">
+  <div class="navbar">
     <?php if (isset($_SESSION['name'])): ?>
-      <a class ="navlink"href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i></a>
+      <a href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i><p> TABLEAU DE BORD</p></a>
     <?php else: ?>
-      <a class ="navlink" href="index.php?action=listPosts"> <i class="fas fa-home"></i> RETOUR A L'ACCUEIL DU BLOG</a>
+      <a href="index.php?action=listPosts"><i class="fas fa-home"></i><p> RETOUR A L'ACCUEIL</p></a>
     <?php endif; ?>
   </div>
 

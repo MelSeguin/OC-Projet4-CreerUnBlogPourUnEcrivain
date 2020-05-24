@@ -3,9 +3,9 @@
 <?php ob_start(); ?>
 
   <div class="navbar">
-    <a class="navlink" href="index.php?action=listPosts"> <i class="fas fa-feather-alt"></i> VOIR MON BLOG </a>
-    <a class="navlink" href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i> TABLEAU DE BORD </a>
-    <a class="navlink" href="index.php?action=logout"> <i class="fas fa-sign-out-alt"></i> DECONNEXION </a>
+    <a href="index.php?action=listPosts"><i class="fas fa-feather-alt"></i><p> VOIR MON BLOG</p> </a>
+    <a href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i><p> TABLEAU DE BORD</p> </a>
+    <a href="index.php?action=logout"><i class="fas fa-sign-out-alt"></i><p> DECONNEXION<p> </a>
   </div>
 
   <div class="flags-head">

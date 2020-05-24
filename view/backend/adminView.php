@@ -3,10 +3,10 @@
 <?php ob_start(); ?>
 
   <div class="navbar">
-    <a class="navlink" href="index.php?action=listPosts"> <i class="fas fa-feather-alt"></i>  VOIR MON BLOG </a>
-    <a class="navlink" href="index.php?action=newPost"><i class="fas fa-book-open"></i> NOUVEL ARTICLE </a>
-    <a class="navlink" href="index.php?action=displayFlags"><i class="fas fa-flag"></i>  <?php echo $getNumber[0];?></a>
-    <a class="navlink" href="index.php?action=logout"> <i class="fas fa-sign-out-alt"></i>  DECONNEXION </a>
+    <a href="index.php?action=listPosts"> <i class="fas fa-feather-alt"></i> <p> VOIR MON BLOG </p></a>
+    <a href="index.php?action=newPost"><i class="fas fa-book-open"></i><p> NOUVEL ARTICLE </p> </a>
+    <a href="index.php?action=displayFlags"><i class="fas fa-flag"></i><p> <?php echo $getNumber[0];?> </p></a>
+    <a href="index.php?action=logout"><i class="fas fa-sign-out-alt"></i><p> DECONNEXION </p></a>
   </div>
 
   <p class="admin-subtitle"> Bonjour <?php echo $_SESSION['name']?>, bienvenu sur votre tableau de bord. <br/>
