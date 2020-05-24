@@ -1,31 +1,3 @@
-/*Palettes de couleur*/
-
-/*All blue*/
-
-/*
-navy = #053861;
-midnight blue =#072747;
-light blue steel = #BFD7DC;
-light sea green = #1D678C; c'est une nuance de bleu
-sky blue = #88CAE0;
-*/
-
-
-/*
-steel blue = #2C6C9C;
-dark slate grey = #323B40;
-light steel blue = #DAE0E2;
-steel blue= #5187B2;
-sky blue = #6BAADC;
-*/
-/*
-
-font-family: 'Caveat', cursive;
-font-family: 'Satisfy', cursive;
-font-family: 'Dancing Script', cursive;
-font-family: 'Special Elite', cursive;
-font-family: 'Montserrat', sans-serif;
-*/
 body{
   display: flex;
   flex-direction: column;
@@ -70,10 +42,10 @@ header{
   align-items: center;
   justify-content: flex-end;
 }
-.navlink {
+.navbar a,.navbar p,.navbar i {
   color : #ffffff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em ;
+  font-size: 1.1em ;
   font-weight: 200;
   text-decoration: none;
   margin-right: 5%;
@@ -206,7 +178,7 @@ hr {
   position: relative;
 }
 
-.comment-section-tle3{
+.comments-section-tle3{
   font-family: 'Indie Flower', cursive;
   font-style: italic;
   font-weight: 700;
