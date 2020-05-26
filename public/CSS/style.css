@@ -36,7 +36,7 @@ header{
 }
 .navbar{
   background-color : #1D678Cbd;
-  height : 2em;
+  height : 3em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -107,8 +107,7 @@ hr {
   color : #1D678C;
 }
 .listposts-container{
-  width : 50%;
-  height: 60%;
+  width : 70%;
   margin : 2% auto 2% auto;
   border : 1px solid #DAE0E2;
   border-radius: 10px;
@@ -139,11 +138,11 @@ hr {
 
 }
 .listposts-content{
-  padding: 5% 12% 2% 12%;
+  padding: 3% 12% 2% 12%;
 }
 .listposts-footer{
   text-align: right;
-  padding: 3%;
+  padding: 2% 2% 2% 4%;
 }
 .listposts-footer a{
   color : #1D678Cbd;
@@ -724,6 +723,7 @@ hr {
   margin-top: 2%;
   margin-bottom: 7%;
 }
+
 
 footer{
   background-image: linear-gradient(to bottom right,#1D678C,#053861);
