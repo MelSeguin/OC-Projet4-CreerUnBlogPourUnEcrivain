@@ -9,7 +9,7 @@ body{
   min-height: 400px;
 }
 header{
-  background-image: url("../images/alaska-1735340_1920.jpg");
+  background-image: url("../images/alaska_cover.jpg");
   display: flex;
   flex-direction:column;
 }
@@ -36,7 +36,7 @@ header{
 }
 .navbar{
   background-color : #1D678Cbd;
-  height : 50px;
+  height : 2em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,14 +45,18 @@ header{
 .navbar a{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   color : #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1em ;
   font-weight: 200;
   text-decoration: none;
-  margin-right: 5%;
+  margin-right: 3%;
+  white-space: nowrap;
+}
+.nav-flag{
+  width :2%;
 }
 .navbar p{
   margin: 0;
@@ -515,7 +519,7 @@ hr {
   opacity: 0;
   z-index: 1;
 }
-.edit-post-container label {
+.edit-post-container .published{
   font-family: "montserrat", sans-serif;
   font-size: .9em;
   position: relative;
@@ -526,7 +530,7 @@ hr {
   padding-right: 1em;
   cursor: pointer;
 }
-.edit-post-container label::before {
+.edit-post-container .published::before {
     box-sizing: border-box;
     content: " ";
     position: absolute;
@@ -540,15 +544,15 @@ hr {
     z-index: -1;
   }
 
-.edit-post-container input[type="chekbox"] + label::before {
+.edit-post-container input[type="chekbox"] + .published::before {
   border-radius: 1em;
 }
 
   /* Checked */
-.edit-post-container input[type="checkbox"]:checked + label {
+.edit-post-container input[type="checkbox"]:checked + .published {
   padding-left: 1em;
 }
-.edit-post-container input[type="checkbox"]:checked + label::before {
+.edit-post-container input[type="checkbox"]:checked + .published::before {
     top: 0;
     width: 100%;
     height: 2em;
@@ -558,7 +562,7 @@ hr {
   }
 
   /* Transition */
-.edit-post-container label, label::before {
+.edit-post-container .published, .published::before {
   transition: .25s all ease;
 }
 
@@ -573,22 +577,40 @@ hr {
   padding : 1%;
   cursor : pointer;
 }
+.edit-post-container .submit i{
+  display: none;
+}
 .edit-post-container input[type=submit]:hover{
   background-color: #ffffff;
   border : 2px solid #053861;
   color: #053861;
 }
-.edit-post-container a{
+.edit-post-container .back i{
+  display:none;
+}
+.edit-post-container .back{
   font-family: "montserrat", sans-serif;
   font-size: 0.9em;
   text-decoration: none;
   background-color: #ffffff;
   border : 2px solid #053861;
   border-radius: 20px;
-  padding : 1%;
+  padding : 1% 4% 1% 4%;
   color: #053861;
+  position: relative;
+
 }
-.edit-post-container a:hover{
+.edit-post-container .back p {
+  margin: 0;
+  width: 15%;
+  padding: 0;
+  position: absolute;
+  top: 28%;
+  right: 70%;
+  z-index: 3;
+}
+}
+.edit-post-container .back:hover{
   background-color: #053861;
   border : 2px solid #ffffff;
   color: #ffffff;
