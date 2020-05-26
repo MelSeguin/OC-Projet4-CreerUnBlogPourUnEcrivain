@@ -1,376 +1,3 @@
-@media screen and (max-width: 1024px) {
-  .page-content{
-    min-height: 350px;
-  }
-  .main-title{
-    font-size: 3.5em;
-  }
-  .main-subtitle{
-    text-align: center;
-    font-size : 1.2em;
-  }
-
-  hr {
-    width: 25%;
-    border: none;
-    background-color: #053861bd;
-    height : 1px;
-    margin-top: 2%;
-    margin-bottom: 1%;
-  }
-  /*postView*/
-
-  .post-container{
-    width : 65%;
-    margin : 2% auto 2% auto;
-  }
-  .post-container p{
-    width : 80%;
-    margin: auto 7% 5% 10%;
-  }
-
-  .comments-section-tle3{
-    font-size: 1.5em;
-  }
-
-  .comments-container{
-    width: 55%;
-    height: auto;
-  }
-
-
-  /* loginView */
-
-  .login-fieldset{
-    margin : 3% auto 1% auto;
-  }
-  .login-form  input[type=submit]{
-    font-size: 0.8em;
-  }
-  .login-form input[type=submit]:hover{
-    background-color: #ffffff;
-    border : 2px solid #053861;
-    color: #053861;
-  }
-  .login-fieldset a{
-    font-size: 0.75em;
-  }
-
-
-  /* adminView */
-
-  .admin-subtitle{
-    font-size: 1.1em;
-  }
-  /*createPostView et updatepostview*/
-  .edit-post-container form{
-    margin-bottom: 1em;
-  }
-  .edit-post-container input[type=text]{
-    margin : 2% auto 2% auto;
-    width : 30%;
-  }
-
-  .edit-post-container input[type="checkbox"] {
-    bottom : 17.7em;
-    margin-left: 4.5em;
-    opacity: 0;
-  }
-  .edit-post-container label {
-    font-size: .85em;
-    margin-left: 4em;
-    padding-left: 2em;
-  }
-
-  .edit-post-container input[type=submit]{
-    font-size: 0.85em;
-  }
-}
-@media screen and (max-width: 870px) {}
-@media screen and (max-width: 768px) {
-  .page-content{
-    min-height: 350px;
-  }
-
-  .main-title{
-    font-size: 3em;
-  }
-  .main-subtitle{
-    font-size : 1.1em;
-  }
-  .navbar{
-    height : 3em;
-  }
-  .navbar a,.navbar p,.navbar i {
-    font-size: 1em ;
-  }
-
-  /*LISTPOSTVIEW*/
-  .listposts-section{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 200px;
-  }
-  .no-posts{
-    width : 45%;
-    height: 60%;
-    margin : auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
-  }
-  .no-posts p{
-    font-family: "montserrat", sans-serif;
-    text-align: center;
-    font-size: 1.1em;
-    margin: 7% auto 7% auto ;
-    border-left : 5px solid #053861 ;
-  }
-  .no-posts a{
-    text-decoration: none;
-    color: inherit;
-  }
-  .no-posts a:hover{
-    font-style:italic;
-    font-weight: bold;
-    color : #1D678C;
-  }
-  .listposts-container{
-    width : 80%;
-  }
-
-  /*postView*/
-
-  .post-container{
-    width : 65%;
-    margin : 2% auto 2% 10%;
-  }
-  .post-container h2{
-    font-size : 1.8em;
-  }
-  .post-container p{
-    width : 90%;
-    margin: auto 5% 5% auto;
-  }
-  .no-post{
-    text-align:center;
-    font-family: "montserrat", sans-serif;
-    font-size: 1.1em;
-    margin: auto;
-    padding-left: 6%;
-    border-left : 5px solid #053861;
-  }
-
-  .comments-section{
-    width: 80%;
-    min-height: 200px;
-  }
-
-  .comments-section-tle3{
-    font-size: 1.5em;
-  }
-
-  .no-comments p{
-    margin-top: 35%;
-    text-align: center;
-    font-style:italic;
-    font-family: "Montserrat", sans-serif;
-    color : #3d3d3dbd;
-    font-size: 1.1em;
-  }
-
-  .form {
-    width : 27%;
-    margin : 2% auto 2% auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
-    position : fixed ;
-    bottom : 0;
-    right : 3%;
-    z-index : 2;
-  }
-  /* loginView */
-
-  .login-fieldset{
-    width : 65%;
-    margin : 5% auto 5% auto;
-  }
-  .login-fieldset h2 {
-    font-size : 1.8em;
-  }
-
-  /* adminView */
-
-  .admin-subtitle{
-    font-size: 1em;
-  }
-  .admin-container{
-    min-height: 240px;
-  }
-
-  /*createPostView et updatepostview*/
-  .edit-post-container{
-    width : 80%;
-    margin: auto;
-  }
-  .edit-post-container i{
-    font-size: 1.1em;
-  }
-  .edit-post-container input[type="text"]{
-    margin-right: 1em;
-  }
-  .edit-post-container input[type="checkbox"] {
-    bottom : 23em;
-    margin-left: 2em;
-    opacity: 0;
-  }
-  .edit-post-container label {
-    font-size: .9em;
-    margin-right : 0.5em;
-    margin-left: 1.5em;
-  }
-  .edit-post-container input[type=submit]{
-    margin-right: 0.5em;
-  }
-  .edit-post-container input[type=submit]:hover{
-    background-color: #ffffff;
-    border : 2px solid #053861;
-    color: #053861;
-  }
-  .edit-post-container a{
-    font-family: "montserrat", sans-serif;
-    font-size: 0.9em;
-    text-decoration: none;
-    background-color: #ffffff;
-    border : 2px solid #053861;
-    border-radius: 20px;
-    padding : 1%;
-    color: #053861;
-  }
-  .edit-post-container a:hover{
-    background-color: #053861;
-    border : 2px solid #ffffff;
-    color: #ffffff;
-  }
-
-  /*flagsView*/
-  .flags-head h2{
-    font-family: 'Indie Flower', cursive;
-    color: #053861;
-    font-size : 1.8em;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    margin-top : 7%;
-  }
-  .flags-head p{
-
-  }
-  .flags-head hr{
-    width: 15%;
-    border: none;
-    background-color: #053861bd;
-    height : 1px;
-    margin-top: 2%;
-    margin-bottom: 3%;
-  }
-  .flags-list p{
-    font-family: 'montserrat',sans-serif;
-    font-size: 1.1em;
-    text-align: center;
-  }
-  .flags-list a{
-    text-decoration: none;
-    color: inherit;
-  }
-  .flags-list a:hover{
-    font-style:italic;
-    font-weight: bold;
-    color : #1D678C;
-  }
-  .flags-list table {
-    margin : 5% auto 3% auto;
-    border-collapse: collapse;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
-    width : 70%;
-  }
-
-  .flags-list th{
-    border-collapse: collapse;
-    text-align: center;
-    font-weight: 200;
-    background-color: #1D678Cbd;
-    color :#ffffff;
-    padding : 3%;
-  }
-  .flags-list tr{
-    border-bottom: 1px solid #1D678C47;
-    text-align: center;
-  }
-
-  .flags-list tr:hover{
-    background-color: #1D678C47;
-  }
-  .flags-list td {
-    padding:2%;
-  }
-  .flags-list td a{
-    text-decoration: none;
-    color:inherit;
-  }
-  .flags-list td a:hover{
-    font-style:italic;
-    font-weight: bold;
-    color : #ffffff;
-  }
-
-  /*logoutView*/
-  .logout{
-    width : 45%;
-    height: 60%;
-    margin : 5% auto 2% auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
-  }
-  .logout h2{
-    border-left: 5px solid #053861;
-    font-family: 'Indie Flower', cursive;
-    font-size : 1.8em;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    color: #053861;
-    margin-top : 5%;
-    margin-bottom: 2%;
-  }
-  .logout p{
-    font-family: "montserrat", sans-serif;
-    text-align: center;
-    font-size: 1.1em;
-    margin-bottom: 7%;
-  }
-
-  .logout hr{
-    width: 15%;
-    border: none;
-    background-color: #053861bd;
-    height : 1px;
-    margin-top: 2%;
-    margin-bottom: 7%;
-  }
-
-
-  footer{
-    background-image: linear-gradient(to bottom right,#1D678C,#053861);
-    height : 80px;
-  }
-
-}
 @media screen and (max-width: 425px) {
   body{
     display: flex;
@@ -379,7 +6,7 @@
     width : 90%;
   }
   .page-content{
-    min-height: 150px;
+    min-height: 500px;
   }
   header {
     width: 100%;
@@ -402,7 +29,9 @@
     bottom: 0;
     z-index: 1;
   }
-
+  .navbar i {
+    font-size: 1.3em;
+  }
   .navbar p{
     display: none;
   }
@@ -416,12 +45,12 @@
     margin-bottom: 1%;
   }
 
-  /*LISTPOSTVIEW*/
+  /*LISTPOSTSVIEW*/
   .listposts-section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 200px;
+    min-height: 500px;
   }
   .no-posts{
     width : 45%;
@@ -449,7 +78,7 @@
   }
   .listposts-container{
     width : 90%;
-    height: 20%;
+    margin-top: 8%;
   }
 
   .listposts-head p{
@@ -592,7 +221,7 @@
   }
 
   .login-form input[type=text], input[type=password] {
-    font-size: .85em;
+    font-size: 0.85em;
     width: 75%;
   }
   .login-form  input[type=submit]{
@@ -601,63 +230,45 @@
   }
 
   .login-fieldset a{
-    font-family: "montserrat", sans-serif;
     font-size: 0.65em;
   }
 
 
   /* adminView */
-
+  .adminView-content{
+    min-height:475px;
+  }
   .admin-subtitle{
-    margin : 5% 5% 3% 5%;
-    font-size: 0.85em;
+    margin : 5% 2% 3% 2%;
+    font-size: 0.88em;
+    white-space: nowrap;
   }
-
   .admin-listposts{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction : column;
-    justify-content: center;
-    margin : 5% 3% 5% 3%;
-    width : 95%;
+    width :95%;
+    margin : 10% auto 12% auto;
   }
-  .admin-listposts th{
-    display : none;
+  .admin-listposts .all-posts{
+    text-align: left;
+    margin-left: 15%;
   }
-  /* .admin-listposts tr{
-    display : block;
-    width: 100%;
-  } */
-  .admin-listposts td{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items : center;
+  .admin-listposts .online p,.admin-listposts .update p, .admin-listposts .delete p {
+    display: none;
   }
-  .admin-listpost-body{
-    display: flex;
-    flex-direction: column;
+  .admin-listposts-link{
+    text-align: left;
+    width: 70%;
   }
-  .admin-listpost-body p{
-    width : 45%;
-    margin-right : 0;
-    display: flex;
-    flex-direction: row;
+  .admin-listposts-link a{
+    margin-left: 3%;
   }
-
-  /* .admin-listpost-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap : wrap;
-    width: 33%;
-  } */
-
+  .admin-listpost-chips{
+    margin-right : 30%;
+  }
   .admin-listposts .green-circle{
-    font-size: 1.1em;
+    font-size: 1em;
   }
   .admin-listposts .grey-circle{
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   /*createPostView et updatepostview*/
@@ -665,15 +276,15 @@
     width : 90%;
   }
   .edit-post-container {
-    font-size : 1.5em;
+    font-size : 1em;
     margin-top: 5%;
   }
 
   .edit-post-container form{
-    margin-bottom: 5%;
+    margin-bottom: 15%;
   }
-  .edit-post-container i{
-    font-size: 0.8em;
+  .edit-post-container .fa-book-open{
+    font-size: 0.9em;
   }
   .edit-post-container input[type=text]{
     margin : 5% auto 2% auto;
@@ -682,25 +293,103 @@
     border-bottom: 1px solid #053861;
   }
 
-  .edit-post-container input[type="checkbox"] {
-    bottom : 31.8em;
-    margin-left: 1.2em;
+  .edit-post-container input[type=checkbox] {
+    bottom : 29em;
+    margin-left: 5.3em;
     opacity:0;
   }
-  .edit-post-container label {
+  .edit-post-container .published {
     font-size: .85em;
-    margin-right : 1em;
-    margin-left: 1em;
+    margin-left: 4em;
+    margin-right: 0;
     padding-top: 0.4em;
-    padding-left: 2em;
     padding-right: 1em;
+    padding-left: 2em;
   }
+
+  .edit-post-container input[type=submit]{
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    width: 2em;
+    padding : 0;
+    position: fixed;
+    bottom : 0.4em;
+    right : 30%;
+    z-index:4;
+  }
+  .submit .fa-save{
+    width: 2em;
+    background-color: transparent;
+    border : none;
+    color : #ffffff;
+    text-align: center;
+    font-size: 1.3em;
+    position: fixed;
+    bottom : 0.3em;
+    right : 30%;
+    z-index:3;
+  }
+  .edit-post-container input[type=submit]:hover{
+    background-color: transparent;
+    border: none;
+    color: transparent;
+  }
+  .fa-save:hover{
+    background-color: transparent;
+    border: none;
+  }
+  .back{
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    bottom: 0.3em;
+    left:30%;
+    z-index: 4;
+  }
+  .back i{
+    background-color: transparent
+    border: none;
+    color : #ffffff;
+    font-size: 1.3em;
+  }
+
+  .back:hover, .back i{
+    background-color: transparent;
+    border: none;
+  }
+  .back p {
+    display:none;
+  }
+
   /*flagsView*/
+  .flagsView-content{
+    min-height: 475px;
+  }
   .flags-head h2{
     font-size : 1.5em;
   }
   .flags-list p{
-    font-size: 1em;
+    font-size: 0.9em;
+  }
+  .flags-list table{
+    width : 95%;
+    margin : 10% auto 12% auto;
+  }
+
+  .flags-list .flags {
+    text-align: left;
+    white-space: nowrap;
+  }
+  .flags-list .ok p,.flags-list .delete p,.flags-list .post p{
+    display: none;
+  }
+  .flags-list-post a{
+    display: none;
+  }
+  .flags-list-comments{
+    text-align: left;
+    width: 70%;
   }
 
   /*logoutView*/
@@ -723,5 +412,3 @@
     display: none;
   }
 }
-@media screen and (max-width: 375px) {}
-@media screen and (max-width: 320px) {}
