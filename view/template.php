@@ -4,10 +4,10 @@
       <meta charset="utf-8" />
       <title><?= $title ?></title>
       <!-- viewport -->
-       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-       <!-- FEUILLES DE STYLE CSS -->
-       <link rel="stylesheet"  href="public/css/style.css"/>
-       <link rel="stylesheet"  href="public/css/media.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <!-- FEUILLES DE STYLE CSS -->
+      <link rel="stylesheet"  href="public/css/style.css"/>
+      <link rel="stylesheet"  href="public/css/media.css"/>
       <!-- CDN pour la police de caractère Indie Flower-->
       <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
       <!-- cdn pour la police de caractère Montserrat-->

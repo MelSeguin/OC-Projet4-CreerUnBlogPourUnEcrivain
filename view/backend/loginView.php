@@ -2,8 +2,6 @@
 
 <?php ob_start(); ?>
 
-
-
   <div class="login-fieldset">
     <h2> Connexion </h2>
     <?php
@@ -19,8 +17,6 @@
     </form>
     <br/>
   </div>
-
-
 <?php $content = ob_get_clean(); ?>
 
 <?php require('view/template.php'); ?>

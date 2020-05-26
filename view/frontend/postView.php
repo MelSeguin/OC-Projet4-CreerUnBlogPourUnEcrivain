@@ -4,15 +4,15 @@
 
   <div class="navbar">
     <?php if (isset($_SESSION['name'])): ?>
-      <a href="index.php?action=admin"><i class="fas fa-chalkboard-teacher"></i><p> TABLEAU DE BORD</p></a>
+      <a href="index.php?action=admin"> <i class="fas fa-chalkboard-teacher"></i> <p>TABLEAU DE BORD</p></a>
     <?php else: ?>
-      <a href="index.php?action=listPosts"><i class="fas fa-home"></i><p> RETOUR A L'ACCUEIL</p></a>
+      <a href="index.php?action=listPosts"> <i class="fas fa-home"></i> <p> RETOUR A L'ACCUEIL </p></a>
     <?php endif; ?>
   </div>
 
-<div class="postView-main-container">
-  <section class="post-container">
-    <?php if ($post == false) : ?>
+  <div class="postView-main-container">
+    <section class="post-container">
+      <?php if ($post == false) : ?>
       <p class ="no-post"> Ce chapitre n'est pas disponible.</p>
     <?php  elseif ($post !== false) : ?>
       <div class="post">
@@ -23,7 +23,7 @@
   </section>
   <hr>
   <section class ="comments-section" >
-    <div class="comment-section-tle3">
+    <div class="comments-section-tle3">
       <h3>Commentaires</h3>
     </div>
     <div class="comments-container">
@@ -59,6 +59,7 @@
               <a href ="index.php?action=deleteComment&amp;id=<?= $post[0] ?>"> <i class="fas fa-trash"></i> supprimer</a>
             </div>
           <?php endif; ?>
+          </div>
         <?php endif;?>
       <?php endwhile; ?>
     <?php endif;?>
