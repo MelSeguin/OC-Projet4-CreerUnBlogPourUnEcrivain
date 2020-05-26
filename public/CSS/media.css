@@ -1,3 +1,289 @@
+@media screen and (max-width: 1024px) {
+  .page-content{
+    min-height: 350px;
+  }
+  .main-title{
+    font-size: 3.5em;
+  }
+  .main-subtitle{
+    text-align: center;
+    font-size : 1.2em;
+  }
+
+  hr {
+    width: 25%;
+    border: none;
+    background-color: #053861bd;
+    height : 1px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+  /*postView*/
+
+  .post-container{
+    width : 65%;
+    margin : 2% auto 2% auto;
+  }
+  .post-container p{
+    width : 80%;
+    margin: auto 7% 5% 10%;
+  }
+
+  .comments-section-tle3{
+    font-size: 1.5em;
+  }
+
+  .comments-container{
+    width: 55%;
+    height: auto;
+  }
+
+  /* loginView */
+
+  .login-fieldset{
+    margin : 3% auto 1% auto;
+  }
+  .login-form  input[type=submit]{
+    font-size: 0.8em;
+  }
+  .login-form input[type=submit]:hover{
+    background-color: #ffffff;
+    border : 2px solid #053861;
+    color: #053861;
+  }
+  .login-fieldset a{
+    font-size: 0.75em;
+  }
+
+
+  /* adminView */
+
+  .admin-subtitle{
+    font-size: 1.1em;
+  }
+  /*createPostView et updatepostview*/
+  .edit-post-container form{
+    margin-bottom: 1em;
+  }
+  .edit-post-container input[type=text]{
+    margin : 2% auto 2% auto;
+    width : 30%;
+  }
+
+  .edit-post-container input[type="checkbox"] {
+    bottom : 17.7em;
+    margin-left: 4.5em;
+    opacity: 0;
+  }
+  .edit-post-container .published {
+    font-size: .85em;
+    margin-left: 4em;
+    padding-left: 2em;
+  }
+
+  .edit-post-container input[type=submit]{
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-content{
+    min-height: 350px;
+  }
+
+  .main-title{
+    font-size: 3em;
+  }
+  .main-subtitle{
+    font-size : 1.1em;
+  }
+  .navbar{
+    height : 3em;
+    justify-content: flex-end;
+  }
+  .navbar a,.navbar p,.navbar i {
+    font-size: 0.95em ;
+  }
+
+  /*LISTPOSTSVIEW*/
+  .listposts-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 200px;
+  }
+  .no-posts{
+    width : 45%;
+    height: 60%;
+    margin : auto;
+    border : 1px solid #DAE0E2;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px #3d3d3dbd;
+  }
+  .no-posts p{
+    font-family: "montserrat", sans-serif;
+    text-align: center;
+    font-size: 1.1em;
+    margin: 7% auto 7% auto ;
+    border-left : 5px solid #053861 ;
+  }
+  .no-posts a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .no-posts a:hover{
+    font-style:italic;
+    font-weight: bold;
+    color : #1D678C;
+  }
+  .listposts-container{
+    width : 750%;
+  }
+
+  /*postView*/
+
+  .post-container{
+    width : 65%;
+    margin : 2% auto 2% 10%;
+  }
+  .post-container h2{
+    font-size : 1.8em;
+  }
+  .post-container p{
+    width : 90%;
+    margin: auto 5% 5% auto;
+  }
+  .no-post{
+    text-align:center;
+    font-family: "montserrat", sans-serif;
+    font-size: 1.1em;
+    margin: auto;
+    padding-left: 6%;
+    border-left : 5px solid #053861;
+  }
+
+  .comments-section{
+    width: 80%;
+    min-height: 200px;
+  }
+
+  .comments-section-tle3{
+    font-size: 1.5em;
+  }
+
+  .no-comments p{
+    margin-top: 35%;
+    text-align: center;
+    font-style:italic;
+    font-family: "Montserrat", sans-serif;
+    color : #3d3d3dbd;
+    font-size: 1.1em;
+  }
+
+  .form {
+    width : 27%;
+    margin : 2% auto 2% auto;
+    border : 1px solid #DAE0E2;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px #3d3d3dbd;
+    position : fixed ;
+    bottom : 0;
+    right : 3%;
+    z-index : 2;
+  }
+  /* loginView */
+
+  .login-fieldset{
+    width : 65%;
+    margin : 5% auto 5% auto;
+  }
+  .login-fieldset h2 {
+    font-size : 1.8em;
+  }
+
+  /* adminView */
+
+  .admin-subtitle{
+    font-size: 1em;
+  }
+  .admin-container{
+    min-height: 475px;
+  }
+  .admin-listposts{
+    width : 85%;
+  }
+  .admin-listposts th{
+    font-size: 0.9em;
+    padding : 2%;
+  }
+  .admin-listposts td a{
+  font-size: 0.9em;
+  }
+  .admin-listposts .green-circle{
+    color: #34C924;
+    font-size: 1em;
+  }
+  .admin-listposts .grey-circle{
+    color: #D8DFE3;
+    font-size: 1em;
+  }
+
+  /*createPostView et updatepostview*/
+  .edit-post-container{
+    width : 80%;
+    margin: auto;
+  }
+  .edit-post-container i{
+    font-size: 1.1em;
+  }
+  .edit-post-container input[type="text"]{
+    margin-right: 1em;
+  }
+  .edit-post-container input[type="checkbox"] {
+    bottom : 23em;
+    margin-left: 2em;
+    opacity: 0;
+  }
+  .edit-post-container .published {
+    font-size: .9em;
+    margin-right : 0.5em;
+    margin-left: 1.5em;
+  }
+  .edit-post-container input[type=submit]{
+    margin-right: 0.5em;
+  }
+
+  /*flagsView*/
+  .flags-head h2{
+    color: #053861;
+  }
+  .flags-list p{
+    font-size: 0.9em;
+  }
+  .flags-list table {
+    width : 85%;
+  }
+
+  .flags-list th{
+    font-size: 0.9em;
+    padding : 2%;
+  }
+  .flags-list td{
+    font-size: 0.9em;
+  }
+
+  /*logoutView*/
+  .logout{
+    width : 55%;
+    margin : 10% auto 10% auto;
+  }
+  .logout h2{
+    border-left: 3px solid #053861;
+    font-size : 1.8em;
+  }
+  .logout p{
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 425px) {
   body{
     display: flex;
@@ -13,11 +299,12 @@
     margin: auto;
   }
   .main-title{
-    font-size: 2.5em;
+    font-size: 2.2em;
+    padding: 5%;
     margin: auto;
   }
   .main-subtitle{
-    font-size : 0.9em;
+    font-size : 1em;
   }
   .navbar{
     background-color : #1D678C;
@@ -53,19 +340,11 @@
     min-height: 500px;
   }
   .no-posts{
-    width : 45%;
-    height: 60%;
-    margin : auto;
-    border : 1px solid #DAE0E2;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #3d3d3dbd;
+    width : 90%;
   }
   .no-posts p{
-    font-family: "montserrat", sans-serif;
-    text-align: center;
-    font-size: 1.1em;
-    margin: 7% auto 7% auto ;
-    border-left : 5px solid #053861 ;
+    font-size: 0.9em;
+    border-left : 3px solid #053861 ;
   }
   .no-posts a{
     text-decoration: none;
@@ -78,6 +357,7 @@
   }
   .listposts-container{
     width : 90%;
+    height:60%;
     margin-top: 8%;
   }
 
@@ -91,7 +371,7 @@
     border-left: 3px solid #053861;
   }
   .listposts-content p {
-    font-size: .80em;
+    font-size: 0.85em;
   }
   .listposts-footer{
     font-size: .80em;
@@ -239,9 +519,17 @@
     min-height:475px;
   }
   .admin-subtitle{
-    margin : 5% 2% 3% 2%;
+    margin : 10% 2% 3% 2%;
     font-size: 0.88em;
     white-space: nowrap;
+  }
+  .admin-hr{
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+  .admin-container p {
+    text-align: center;
+    font-size: 0.9em;
   }
   .admin-listposts{
     width :95%;
@@ -294,8 +582,8 @@
   }
 
   .edit-post-container input[type=checkbox] {
-    bottom : 29em;
-    margin-left: 5.3em;
+    bottom : 27.2em;
+    margin-left: 4.3em;
     opacity:0;
   }
   .edit-post-container .published {
@@ -318,7 +606,8 @@
     right : 30%;
     z-index:4;
   }
-  .submit .fa-save{
+  .edit-post-container .submit i{
+    display: block;
     width: 2em;
     background-color: transparent;
     border : none;
@@ -335,31 +624,36 @@
     border: none;
     color: transparent;
   }
-  .fa-save:hover{
+  .edit-post-container .submit i:hover{
     background-color: transparent;
     border: none;
   }
-  .back{
+  .edit-post-container .back{
     background-color: transparent;
     border: none;
+    color : transparent;
+  }
+  .edit-post-container .back i{
+    display: block;
+    width :2em;
+    background-color: transparent
+    border: none;
+    color : #ffffff;
+    font-size: 1.3em;
+    padding-left: 0.5em;
     position: fixed;
     bottom: 0.3em;
     left:30%;
     z-index: 4;
   }
-  .back i{
-    background-color: transparent
-    border: none;
-    color : #ffffff;
-    font-size: 1.3em;
-  }
 
-  .back:hover, .back i{
+  .edit-post-container .back:hover, .edit-post-container .back i{
     background-color: transparent;
     border: none;
   }
   .back p {
     display:none;
+    position: static;
   }
 
   /*flagsView*/
@@ -395,7 +689,7 @@
   /*logoutView*/
   .logout{
     width : 80%;
-    margin : 5% auto 2% auto;
+    margin : 15% auto 2% auto;
     border : 1px solid #DAE0E2;
     border-radius: 10px;
     box-shadow: 1px 2px 3px #3d3d3dbd;
@@ -411,4 +705,24 @@
   footer{
     display: none;
   }
+}
+@media screen and (max-width: 375px) {
+  /*adminview*/
+  .admin-subtitle {
+    white-space: normal;
+    width: 85%;
+    margin: 12% auto auto auto;
+  }
+
+ /*editpostviews*/
+
+  .edit-post-container input[type=checkbox] {
+    bottom : 28em;
+    margin-left: 2.2em;
+    opacity:0;
+  }
+  .edit-post-container .published {
+    margin-left: 2em;
+  }
+
 }
