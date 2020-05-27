@@ -36,20 +36,20 @@ try {
         if (isset($_SESSION['name'])){
           adminTools();
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     } elseif ($_GET['action'] == 'newPost'){
         if (isset($_SESSION['name'])){
           require('view/backend/createPostView.php');
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     } elseif ($_GET['action'] == 'savePost'){
-      if (isset($_SESSION['name'])){
-        savePost($_POST['title'],$_POST['content'],$_POST['published']);
-      } else {
-        header('location : index.php');
-      }
+        if (isset($_SESSION['name'])){
+          savePost(htmlspecialchars($_POST['title']),$_POST['content'],$_POST['published']);
+        } else {
+          header('location : index.php');
+        }
     } elseif ($_GET['action'] == 'editPost') {
         if (isset($_SESSION['name'])){
           if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -58,7 +58,7 @@ try {
             throw new Exception('aucun identifiant de post envoyé');
           }
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     } elseif ($_GET['action'] == 'updatePost'){
         if (isset($_SESSION['name'])){
@@ -74,13 +74,13 @@ try {
             throw new Exception('aucun identifiant de post envoyé');
           }
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     } elseif ($_GET['action'] == 'deleteComment'){
         if (isset($_SESSION['name'])){
           deleteComment($_GET['id']);
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     } elseif ($_GET['action'] == 'setFlag'){
         if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -90,7 +90,7 @@ try {
         }
     } elseif ($_GET['action'] == 'displayFlags'){
         if (!isset($_SESSION['name'])){
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         } else {
           displayFlags();
         }
@@ -102,7 +102,7 @@ try {
             throw new Exception('aucun identifiant de post envoyé');
           }
         } else {
-          header('location : index.php?action=listPosts');
+          header('location : index.php');
         }
     }
   } elseif (isset($_SESSION['name'])) {
