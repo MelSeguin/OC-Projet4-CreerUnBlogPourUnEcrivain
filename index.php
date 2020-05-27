@@ -33,55 +33,27 @@ try {
         session_destroy();
         require('view/backend/logoutView.php');
     } elseif ($_GET['action'] == 'admin'){
-        if (isset($_SESSION['name'])){
-          adminTools();
-        } else {
-          header('location : index.php');
-        }
+        adminTools();
     } elseif ($_GET['action'] == 'newPost'){
-        if (isset($_SESSION['name'])){
-          require('view/backend/createPostView.php');
-        } else {
-          header('location : index.php');
-        }
+        require('view/backend/createPostView.php');
     } elseif ($_GET['action'] == 'savePost'){
-        if (isset($_SESSION['name'])){
-          savePost(htmlspecialchars($_POST['title']),$_POST['content'],$_POST['published']);
-        } else {
-          header('location : index.php');
-        }
+        savePost($_POST['title'],$_POST['content'],$_POST['published']);
     } elseif ($_GET['action'] == 'editPost') {
-        if (isset($_SESSION['name'])){
-          if (isset($_GET['id']) && $_GET['id'] > 0) {
-            editPost($_GET['id']);
-          } else {
-            throw new Exception('aucun identifiant de post envoyé');
-          }
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+          editPost($_GET['id']);
         } else {
-          header('location : index.php');
+            throw new Exception('aucun identifiant de post envoyé');
         }
     } elseif ($_GET['action'] == 'updatePost'){
-        if (isset($_SESSION['name'])){
           updatePost($_GET['id'],htmlspecialchars($_POST['title']),$_POST['content'],$_POST['published']);
-        } else {
-          header('location : index.php');
-        }
     } elseif ($_GET['action'] == 'deletePost') {
-        if (isset($_SESSION['name'])){
-          if (isset($_GET['id']) && $_GET['id'] > 0) {
-            deletePost($_GET['id']);
-          } else {
-            throw new Exception('aucun identifiant de post envoyé');
-          }
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+          deletePost($_GET['id']);
         } else {
-          header('location : index.php');
+          throw new Exception('aucun identifiant de post envoyé');
         }
     } elseif ($_GET['action'] == 'deleteComment'){
-        if (isset($_SESSION['name'])){
           deleteComment($_GET['id']);
-        } else {
-          header('location : index.php');
-        }
     } elseif ($_GET['action'] == 'setFlag'){
         if (isset($_GET['id']) && $_GET['id'] > 0) {
           setFlag($_GET['id']);
@@ -89,20 +61,12 @@ try {
             throw new Exception('aucun identifiant de commentaire envoyé');
         }
     } elseif ($_GET['action'] == 'displayFlags'){
-        if (!isset($_SESSION['name'])){
-          header('location : index.php');
-        } else {
-          displayFlags();
-        }
+        displayFlags();
     } elseif ($_GET['action'] == 'unsetFlag'){
-        if (isset($_SESSION['name'])){
-          if (isset($_GET['id']) && $_GET['id'] > 0) {
-            unsetFlag($_GET['id']);
-          } else {
-            throw new Exception('aucun identifiant de post envoyé');
-          }
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+          unsetFlag($_GET['id']);
         } else {
-          header('location : index.php');
+            throw new Exception('aucun identifiant de post envoyé');
         }
     }
   } elseif (isset($_SESSION['name'])) {
