@@ -495,25 +495,46 @@ hr {
 }
 .edit-post-container form{
   margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
 }
+.head-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items : center;
+  margin-bottom: 2em;
+}
+.title-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width : 50em;
+}
+
 .edit-post-container i{
   color : #053861;
   font-size: 1.2em;
 }
 .edit-post-container input[type=text]{
-  margin : 5% auto 2% auto;
   font-family: "montserrat", sans-serif;
-  width : 35%;
   font-size: 1em;
   border: none;
   border-bottom: 2px solid #053861;
   padding : 1%;
 }
 
+.box-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-right: 2em;
+  width: 6em;
+}
+
 .edit-post-container input[type="checkbox"] {
   position: absolute;
-  bottom : 14.5em;
-  margin-left: 17.6em;
+  top : 0.3em;
   cursor : pointer;
   opacity: 0;
   z-index: 1;
@@ -521,14 +542,13 @@ hr {
 .edit-post-container .published{
   font-family: "montserrat", sans-serif;
   font-size: .9em;
-  position: relative;
   margin-right : 2em;
-  margin-left: 16em;
   padding-top: 0.4em;
   padding-left: 2em;
   padding-right: 1em;
   cursor: pointer;
 }
+
 .edit-post-container .published::before {
     box-sizing: border-box;
     content: " ";
@@ -552,20 +572,28 @@ hr {
   padding-left: 1em;
 }
 .edit-post-container input[type="checkbox"]:checked + .published::before {
-    top: 0;
-    width: 100%;
-    height: 2em;
-    background-color:#ffffff;
-    border : 2px solid #34C924;
-    border-radius: 20px;
-  }
+  top: 0;
+  width: 100%;
+  height: 2em;
+  background-color:#ffffff;
+  border : 2px solid #34C924;
+  border-radius: 20px;
+}
 
   /* Transition */
 .edit-post-container .published, .published::before {
   transition: .25s all ease;
 }
 
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20em;
+}
 .edit-post-container input[type=submit]{
+  top: ;
+  left : 40em;
   font-family: "montserrat", sans-serif;
   font-size: 0.9em;
   margin-right: 2em;
@@ -573,7 +601,7 @@ hr {
   background-color: #053861;
   border : 2px solid #ffffff;
   color: #ffffff;
-  padding : 1%;
+  padding : 0.8em;
   cursor : pointer;
 }
 .edit-post-container .submit i{
@@ -594,21 +622,10 @@ hr {
   background-color: #ffffff;
   border : 2px solid #053861;
   border-radius: 20px;
-  padding : 1% 4% 1% 4%;
+  padding : 0.8em;
   color: #053861;
-  position: relative;
+}
 
-}
-.edit-post-container .back p {
-  margin: 0;
-  width: 15%;
-  padding: 0;
-  position: absolute;
-  top: 28%;
-  right: 70%;
-  z-index: 3;
-}
-}
 .edit-post-container .back:hover{
   background-color: #053861;
   border : 2px solid #ffffff;
@@ -723,7 +740,6 @@ hr {
   margin-top: 2%;
   margin-bottom: 7%;
 }
-
 
 footer{
   background-image: linear-gradient(to bottom right,#1D678C,#053861);

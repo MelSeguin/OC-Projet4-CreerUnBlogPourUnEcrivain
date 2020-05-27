@@ -11,23 +11,22 @@
     }
   ?>
     <form action="index.php?action=savePost" method="post">
-      <i class="fas fa-feather-alt"></i> <input type="text" name="title" value="" placeholder="Titre de l'article" required>
-      <input type="checkbox" name="published" value="" >
-      <label class="published" for="published"> PUBLIER </label>
-      <label class="submit" for="submit"><i class="fas fa-save"></i></label>
-      <input type="submit" name="submit" value="ENREGISTRER">
-      <?php if(isset($_SESSION['name'])) : ?>
-        <a class="back" href="index.php?action=admin">
-          <i class="fas fa-arrow-circle-left"></i>
-          <p>RETOUR</p>
-        </a>
-      <?php else : ?>
-        <a class="back" href="index.php?action=listPosts">
-          <i class="fas fa-arrow-circle-left"></i>
-          <p> RETOUR </p>
-        </a>
-      <?php endif; ?>
-      <textarea id="content" name="content" required>  </textarea>
+      <div class="head-container">
+        <div class="title-container">
+          <i class="fas fa-feather-alt"></i>
+          <input type="text" name="title" value="" placeholder="Titre de l'article" required>
+        </div>
+        <div class="box-container">
+          <input type="checkbox" name="published" value="" >
+          <label class="published" for="published"> PUBLIER </label>
+        </div>
+        <div class="buttons-container">
+          <label class="submit" for="submit"><i class="fas fa-save"></i></label>
+          <input type="submit" name="submit" value="ENREGISTRER">
+          <a class="back" href="index.php?action=admin"><i class="fas fa-arrow-circle-left"></i>RETOUR</a>
+        </div>
+      </div>
+      <textarea id="content" name="content" required></textarea>
     </form>
 </div>
 
