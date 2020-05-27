@@ -591,12 +591,19 @@ hr {
   justify-content: center;
   width: 20em;
 }
+.summit-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 8em;
+  height: 3em;
+  margin: auto;
+  position: relative;
+}
 .edit-post-container input[type=submit]{
-  top: ;
-  left : 40em;
   font-family: "montserrat", sans-serif;
   font-size: 0.9em;
-  margin-right: 2em;
   border-radius: 20px;
   background-color: #053861;
   border : 2px solid #ffffff;
@@ -612,12 +619,23 @@ hr {
   border : 2px solid #053861;
   color: #053861;
 }
+.back-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 6em;
+  height: 3em;
+  margin: auto;
+  position: relative;
+}
+
 .edit-post-container .back i{
   display:none;
 }
 .edit-post-container .back{
   font-family: "montserrat", sans-serif;
   font-size: 0.9em;
+  text-align: center;
   text-decoration: none;
   background-color: #ffffff;
   border : 2px solid #053861;
@@ -740,6 +758,7 @@ hr {
   margin-top: 2%;
   margin-bottom: 7%;
 }
+
 
 footer{
   background-image: linear-gradient(to bottom right,#1D678C,#053861);

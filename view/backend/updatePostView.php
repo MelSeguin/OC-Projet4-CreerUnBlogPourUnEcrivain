@@ -16,10 +16,13 @@
           <label class="published" for="published"> PUBLIER </label>
         </div>
         <div class="buttons-container">
-          <label class="submit" for="submit"><i class="fas fa-save"></i></label>
-          <input type="submit" name="submit" value="ENREGISTRER">
-          <a class="back" href="index.php?action=admin"><i class="fas fa-arrow-circle-left"></i>RETOUR</a>
-        </div>
+          <div class="summit-button">
+            <label class="submit" for="submit"><i class="fas fa-save"></i></label>
+            <input type="submit" name="submit" value="ENREGISTRER">
+          </div>
+          <div class="back-button">
+            <a class="back" href="index.php?action=admin"><i class="fas fa-arrow-circle-left"></i>RETOUR</a>
+          </div>
       </div>
         <textarea id="content" name="content" required> <?php echo $editPost['post_content'] ?>  </textarea>
     </form>
