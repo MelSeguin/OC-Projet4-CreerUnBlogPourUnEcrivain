@@ -23,13 +23,6 @@ require_once('model/LoginManager.php');
       }
   }
 
-  function logout() {
-    $loginManager = new LoginManager();
-    $loggedOut = $loginManager -> logout();
-
-    require('view/backend/logoutView.php');
-  }
-
   function adminTools(){
 
     $commentManager = new CommentManager();
@@ -37,6 +30,7 @@ require_once('model/LoginManager.php');
 
     $postManager = new PostManager();
     $getPosts = $postManager -> getPosts();
+    $nbPosts = $postManager -> allPostsCount();
 
     require('view/backend/adminView.php');
   }
@@ -87,7 +81,7 @@ require_once('model/LoginManager.php');
   function displayFlags(){
 
     $commentManager = new CommentManager();
-    $getComments = $commentManager -> getFlaggedComments();
+    $getComments = $commentManager -> getCommentsByPost();
     $nbComment = $commentManager -> commentsCount();
 
     require('view/backend/flagsView.php');
