@@ -65,20 +65,21 @@
   .edit-post-container form{
     margin-bottom: 1em;
   }
+  .head-container {
+    margin-bottom : 1.5em;
+  }
+  .edit-post-container i {
+    display:block;
+  }
   .edit-post-container input[type=text]{
-    margin : 2% auto 2% auto;
-    width : 30%;
+    width : 15em;
   }
 
   .edit-post-container input[type="checkbox"] {
-    bottom : 17.7em;
-    margin-left: 4.5em;
     opacity: 0;
   }
   .edit-post-container .published {
     font-size: .85em;
-    margin-left: 4em;
-    padding-left: 2em;
   }
 
   .edit-post-container input[type=submit]{
@@ -236,17 +237,14 @@
     font-size: 1.1em;
   }
   .edit-post-container input[type="text"]{
+    width : 10em;
     margin-right: 1em;
   }
   .edit-post-container input[type="checkbox"] {
-    bottom : 23em;
-    margin-left: 2em;
     opacity: 0;
   }
   .edit-post-container .published {
     font-size: .9em;
-    margin-right : 0.5em;
-    margin-left: 1.5em;
   }
   .edit-post-container input[type=submit]{
     margin-right: 0.5em;
@@ -575,37 +573,51 @@
     font-size: 0.9em;
   }
   .edit-post-container input[type=text]{
-    margin : 5% auto 2% auto;
-    width : 43%;
+    width : 10em;
     font-size: 0.85em;
     border-bottom: 1px solid #053861;
   }
-
+  .box-container {
+    margin: 0;
+  }
   .edit-post-container input[type=checkbox] {
-    bottom : 27.2em;
-    margin-left: 4.3em;
     opacity:0;
   }
   .edit-post-container .published {
     font-size: .85em;
-    margin-left: 4em;
-    margin-right: 0;
     padding-top: 0.4em;
     padding-right: 1em;
     padding-left: 2em;
   }
-
-  .edit-post-container input[type=submit]{
-    background-color: transparent;
-    color: transparent;
-    border: none;
+  .buttons-container {
     width: 2em;
     padding : 0;
     position: fixed;
     bottom : 0.4em;
-    right : 30%;
-    z-index:4;
+    z-index: 3;
   }
+  .summit-button{
+    width: 2.5em;
+    height: 1.5em;
+    position: fixed;
+    bottom : 0.3em;
+    right : 30%;
+    z-index:3;
+  }
+  .back-button {
+    width: 2.5em;
+    height: 1.5em;
+    position: fixed;
+    bottom : 0.3em;
+    left : 30%;
+    z-index:3;
+  }
+  .edit-post-container input[type=submit]{
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    z-index: 5;
+}
   .edit-post-container .submit i{
     display: block;
     width: 2em;
@@ -614,10 +626,9 @@
     color : #ffffff;
     text-align: center;
     font-size: 1.3em;
-    position: fixed;
-    bottom : 0.3em;
-    right : 30%;
-    z-index:3;
+    position:  absolute;
+    top:0;
+    z-index: 3;
   }
   .edit-post-container input[type=submit]:hover{
     background-color: transparent;
@@ -632,28 +643,26 @@
     background-color: transparent;
     border: none;
     color : transparent;
+    z-index :4;
   }
   .edit-post-container .back i{
     display: block;
-    width :2em;
-    background-color: transparent
-    border: none;
-    color : #ffffff;
-    font-size: 1.3em;
-    padding-left: 0.5em;
-    position: fixed;
-    bottom: 0.3em;
-    left:30%;
-    z-index: 4;
-  }
-
-  .edit-post-container .back:hover, .edit-post-container .back i{
     background-color: transparent;
     border: none;
+    color : #ffffff;
+    font-size: 1.5em;
+    position: absolute;
+    top : 0;
+    z-index : 3;
   }
-  .back p {
-    display:none;
-    position: static;
+  .edit-post-container .back:hover {
+    background-color: transparent;
+    border: none;
+    color : transparent
+  }
+  .edit-post-container .back i:hover{
+    background-color: transparent;
+    border: none;
   }
 
   /*flagsView*/
@@ -713,16 +722,10 @@
     width: 85%;
     margin: 12% auto auto auto;
   }
-
  /*editpostviews*/
 
   .edit-post-container input[type=checkbox] {
-    bottom : 28em;
-    margin-left: 2.2em;
     opacity:0;
-  }
-  .edit-post-container .published {
-    margin-left: 2em;
   }
 
 }
