@@ -23,10 +23,10 @@
           <div class="back-button">
             <a class="back" href="index.php?action=admin"><i class="fas fa-arrow-circle-left"></i>RETOUR</a>
           </div>
+        </div>
       </div>
         <textarea id="content" name="content" required> <?php echo $editPost['post_content'] ?>  </textarea>
     </form>
-</div>
 <?php $content = ob_get_clean(); ?>
 
 <?php require('view/template.php'); ?>
