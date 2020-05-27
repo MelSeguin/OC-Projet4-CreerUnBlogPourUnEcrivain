@@ -18,7 +18,7 @@
     <section class = "listposts-section">
       <?php if($publishedPosts[0] == 0) :?>
         <div class="no-posts">
-          <p> Il n'y a pas encore d'article à afficher.<br/>
+          <p> Il n'y a pas encore d'article publié.<br/>
         <?php if (isset($_SESSION['name'])): ?>
           <a href="index.php?action=newPost"> Commencer à écrire ? </a></p>
         </div>
@@ -47,7 +47,7 @@
   <?php endwhile; ?>
   <?php $posts -> closeCursor(); ?>
   </section>
-<?php endif; ?>
+  <?php endif; ?>
 
 <?php $content = ob_get_clean(); ?>
 
