@@ -13,7 +13,28 @@
     return $posts;
   }
 
-//récupérer un article précis
+//fonction pour compter le nombre d'articles publiés
+  public function publishedPostCount(){
+    $db = $this -> dbConnect();
+
+    $req = $db -> prepare('SELECT COUNT(*) FROM posts WHERE post_published = "yes"');
+    $req -> execute(array());
+    $number = $req -> fetch();
+
+    return $number;
+  }
+
+//fonction pour compter le nombre d'articles enregistrés
+public function allPostsCount(){
+  $db = $this -> dbConnect();
+
+  $req = $db -> prepare('SELECT COUNT(*) FROM posts');
+  $req -> execute(array());
+  $number = $req -> fetch();
+
+  return $number;
+}
+//récupérer un article en particulier
   public function getPost($postId){
     $db = $this -> dbConnect();
 
@@ -34,12 +55,11 @@
       $postPublished = "no";
     }
 
-    $savePost = $db ->  prepare ('INSERT INTO `posts` (`ID`, `post_title`, `post_content`, `post_date`,`post_published`) VALUES (NULL,:postTitle,:postContent, NOW(),:postPublished)');
+    $savePost = $db ->  prepare ('INSERT INTO `posts` (`id`, `post_title`, `post_content`, `post_date`,`post_published`) VALUES (NULL,:postTitle,:postContent, NOW(),:postPublished)');
     $savedPost = $savePost -> execute(array(':postTitle' => $postTitle, ':postContent' => $postContent, ':postPublished' => $postPublished));
 
     return $savedPost;
   }
-
 
 //modifier un article dans la base de données
   public function updatePost($postId,$postTitle,$postContent,$postPublished){
@@ -52,7 +72,7 @@
       $postPublished = "no";
     }
 
-    $updatePost = $db -> prepare ('UPDATE posts SET post_title = :postTitle , post_content = :postContent, post_date = NOW(), post_published = :postPublished WHERE ID = :postId ');
+    $updatePost = $db -> prepare ('UPDATE posts SET post_title = :postTitle , post_content = :postContent, post_date = NOW(), post_published = :postPublished WHERE id = :postId ');
     $updatedPost = $updatePost -> execute( array(':postTitle' => $postTitle, ':postContent' => $postContent, ':postPublished' => $postPublished, ':postId' => $postId ));
 
     return $updatedPost;
@@ -72,5 +92,6 @@
         throw new Exception("Cet article n'a pas pu être supprimé. Merci de réessayer plus tard. ");
     }
   }
+
 }
 ?>
