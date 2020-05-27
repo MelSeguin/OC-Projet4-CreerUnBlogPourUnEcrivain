@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-        <textarea id="content" name="content" required> <?php echo $editPost['post_content'] ?>  </textarea>
+        <textarea id="content" name="content"> <?php echo $editPost['post_content'] ?>  </textarea>
     </form>
 <?php $content = ob_get_clean(); ?>
 

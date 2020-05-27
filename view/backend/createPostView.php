@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <textarea id="content" name="content" required></textarea>
+      <textarea id="content" name="content"></textarea>
     </form>
 </div>
 
