@@ -18,7 +18,7 @@
     <section class = "listposts-section">
       <?php if($publishedPosts[0] == 0) :?>
         <div class="no-posts">
-          <p> Il n'y a pas encore d'article publié.<br/>
+          <p> Il n'y a pas encore d'article à afficher.<br/>
         <?php if (isset($_SESSION['name'])): ?>
           <a href="index.php?action=newPost"> Commencer à écrire ? </a></p>
         </div>
@@ -28,26 +28,27 @@
 
       <?php if($data[4] == "yes") :?>
         <div class="listposts-container">
-          <a href="index.php?action=post&amp;id=<?= $data[0] ?>">
           <div class="listposts-head">
+           <a href="index.php?action=post&amp;id=<?= $data[0] ?>">
             <p><?php echo htmlspecialchars($data[3]); ?></p>
             <h3><?php echo htmlspecialchars($data[1]); ?></h3>
+           </a>
           </div>
           <hr>
           <div class="listposts-content">
-          <?php echo substr($data[2], 0, 650).'...';?>
+           <a href="index.php?action=post&amp;id=<?= $data[0] ?>">
+          	<?php echo substr($data[2], 0, 650).'... </span></p>';?>
+           </a>
           </div>
-
           <div class="listposts-footer">
             <a href="index.php?action=post&amp;id=<?= $data[0] ?>"> Découvrir la suite... </a>
           </div>
-        </a>
       </div>
-  <?php endif;?>
-  <?php endwhile; ?>
-  <?php $posts -> closeCursor(); ?>
+    <?php endif;?>
+    <?php endwhile; ?>
+    <?php $posts -> closeCursor(); ?>
   </section>
-  <?php endif; ?>
+<?php endif; ?>
 
 <?php $content = ob_get_clean(); ?>
 
