@@ -1,5 +1,5 @@
 <?php $title = "Commentaires signalés | Billet simple pour l'Alaska"; ?>
-
+<?php if(isset($_SESSION['name'])):?>
 <?php ob_start(); ?>
 
   <div class="navbar">
@@ -45,5 +45,7 @@
   </div>
 
 <?php $content = ob_get_clean(); ?>
-
+<?php else :?>
+<?php header('location: index.php?action=login') ?>
+<?php endif; ?>
 <?php require('view/template.php'); ?>

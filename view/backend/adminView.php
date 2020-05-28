@@ -57,6 +57,6 @@
 
 <?php $content = ob_get_clean(); ?>
 <?php else :?>
-<?php header('location: index.php?action=listPosts') ?>
+<?php header('location: index.php?action=login') ?>
 <?php endif; ?>
 <?php require('view/template.php'); ?>
