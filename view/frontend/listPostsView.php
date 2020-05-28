@@ -44,9 +44,9 @@
             <a href="index.php?action=post&amp;id=<?= $data[0] ?>"> Découvrir la suite... </a>
           </div>
       </div>
-    <?php endif;?>
-    <?php endwhile; ?>
-    <?php $posts -> closeCursor(); ?>
+  <?php endif;?>
+  <?php endwhile; ?>
+  <?php $posts -> closeCursor(); ?>
   </section>
 <?php endif; ?>
 

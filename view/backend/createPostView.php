@@ -17,13 +17,13 @@
           <input type="text" name="title" value="" placeholder="Titre de l'article" required>
         </div>
         <div class="box-container">
-          <input type="checkbox" name="published" value="" >
+          <input type="checkbox" id="published" name="published" value="" >
           <label class="published" for="published"> PUBLIER </label>
         </div>
         <div class="buttons-container">
           <div class="summit-button">
             <label class="submit" for="submit"><i class="fas fa-save"></i></label>
-            <input type="submit" name="submit" value="ENREGISTRER">
+            <input type="submit" id="submit" name="submit" value="ENREGISTRER">
           </div>
           <div class="back-button">
             <a class="back" href="index.php?action=admin"><i class="fas fa-arrow-circle-left"></i>RETOUR</a>
