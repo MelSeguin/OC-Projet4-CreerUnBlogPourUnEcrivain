@@ -18,7 +18,7 @@ try {
     } elseif ($_GET['action'] == 'addComment') {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
           if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-            addComment($_GET['id'], $_POST['author'], $_POST['comment']);
+            addComment($_GET['id'], htmlspecialchars($_POST['author']), htmlspecialchars($_POST['comment']));
           } else {
             throw new Exception('merci de remplir tous les champs.');
           }
@@ -37,7 +37,7 @@ try {
     } elseif ($_GET['action'] == 'newPost'){
         require('view/backend/createPostView.php');
     } elseif ($_GET['action'] == 'savePost'){
-        savePost($_POST['title'],$_POST['content'],$_POST['published']);
+        savePost(htmlspecialchars($_POST['title']),$_POST['content'],$_POST['published']);
     } elseif ($_GET['action'] == 'editPost') {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
           editPost($_GET['id']);
