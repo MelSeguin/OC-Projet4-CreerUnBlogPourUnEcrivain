@@ -8,19 +8,7 @@ require_once('model/LoginManager.php');
     $loginManager = new LoginManager();
     $user = $loginManager -> login($password,$name);
 
-    if (password_verify($password,$user[2]) && $name == $user[1] ){
-        $correctInfos = true;
-        $_SESSION['name'] = $user[1];
-        $_SESSION['password'] = $user[2];
-
-        header ('location: index.php?action=admin');
-
-    } elseif ($name !== $user[1] || !password_verify($password,$user[2])){
-        $correctInfos = false;
-        $errorMessage = "Pseudo et/ou Mot de passe incorrect(s).";
-
-        require('view/backend/loginView.php');
-      }
+    require('view/backend/loginView.php');
   }
 
   function adminTools(){
